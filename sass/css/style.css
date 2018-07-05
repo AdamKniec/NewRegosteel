@@ -1,6 +1,6 @@
 @font-face {
   font-family: 'Avenir Roman';
-  src: url("/fonts/avenir-roman.ttf"); }
+  src: url("newRegosteel/fonts/avenir-roman.ttf"); }
 body {
   margin: 0;
   font-family: 'Avenir Roman'; }
@@ -44,7 +44,7 @@ body {
   body header {
     display: flex;
     align-items: center;
-    background-image: url("/img/header-background.png");
+    background-image: url("/newRegosteel/img/header-background.png");
     height: 90vh;
     position: relative;
     justify-content: center; }
