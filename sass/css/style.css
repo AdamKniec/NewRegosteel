@@ -1,0 +1,193 @@
+@font-face {
+  font-family: 'Avenir Roman';
+  src: url("/fonts/avenir-roman.ttf"); }
+body {
+  margin: 0;
+  font-family: 'Avenir Roman'; }
+  body nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: transparent;
+    padding-top: 20px;
+    transition: all 0.2s;
+    height: 100px;
+    position: absolute;
+    z-index: 1;
+    width: 100%; }
+    body nav img {
+      width: auto;
+      height: 30px; }
+    body nav ul {
+      display: flex;
+      list-style-type: none; }
+      body nav ul li {
+        padding: 40px;
+        font-size: 1rem;
+        transition: padding 0.2s; }
+        body nav ul li a {
+          text-decoration: none;
+          color: white; }
+          body nav ul li a:hover {
+            border-bottom: 2px solid orangered; }
+  body .sticky {
+    position: fixed;
+    background-color: black;
+    width: 100%;
+    padding: 0;
+    z-index: 1;
+    opacity: 0.9;
+    height: 80px; }
+    body .sticky ul li {
+      padding: 30px;
+      transition: padding 0.2s; }
+  body header {
+    display: flex;
+    align-items: center;
+    background-image: url("/img/header-background.png");
+    height: 90vh;
+    position: relative;
+    justify-content: center; }
+    body header .titleContainer {
+      display: flex;
+      justify-content: center;
+      text-align: center;
+      height: 55vh; }
+      body header .titleContainer div {
+        align-self: center;
+        color: white;
+        font-size: 2rem; }
+        body header .titleContainer div h1, body header .titleContainer div p {
+          padding: 0;
+          margin: 0; }
+        body header .titleContainer div h1 {
+          font-size: 5rem; }
+        body header .titleContainer div p {
+          font-size: 3rem; }
+    body header .scrollArrowBox {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      bottom: -35px;
+      width: 70px;
+      height: 70px;
+      background-color: orangered;
+      border-radius: 50%;
+      -webkit-box-shadow: 0px 11px 20px 0px rgba(0, 0, 0, 0.56);
+      box-shadow: 0px 11px 20px 0px rgba(0, 0, 0, 0.56); }
+      body header .scrollArrowBox img {
+        width: 20px;
+        height: 10px; }
+  body .aboutUs {
+    text-align: center; }
+    body .aboutUs h3 {
+      padding-top: 5%; }
+    body .aboutUs .detailContainer {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding-bottom: 5%; }
+      body .aboutUs .detailContainer .detailBox {
+        position: relative;
+        width: 300px;
+        margin: 50px;
+        color: #757575; }
+        body .aboutUs .detailContainer .detailBox h4 {
+          padding-bottom: 40px; }
+          body .aboutUs .detailContainer .detailBox h4::after {
+            content: '';
+            position: absolute;
+            width: 20px;
+            border-bottom: 2px solid orangered;
+            top: 70px;
+            right: 47%; }
+  body .products {
+    background-color: red; }
+    body .products h3 {
+      color: black;
+      margin: 0; }
+    body .products .galleryContainer {
+      display: flex; }
+  body .ourAdvantages {
+    background-color: orangered;
+    text-align: center;
+    color: white;
+    padding: 7%; }
+    body .ourAdvantages .advantageBoxContainer {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap; }
+      body .ourAdvantages .advantageBoxContainer .advantageBox {
+        padding: 50px; }
+      body .ourAdvantages .advantageBoxContainer img {
+        width: 80px;
+        height: 80px;
+        margin-bottom: 50px; }
+  body .contactForm {
+    text-align: center;
+    padding: 7%; }
+    body .contactForm .formIntro {
+      padding-bottom: 60px;
+      position: relative; }
+      body .contactForm .formIntro::after {
+        content: '';
+        position: absolute;
+        width: 20px;
+        border-bottom: 2px solid orangered;
+        top: 90px;
+        right: 50%; }
+    body .contactForm form {
+      margin-left: -15%; }
+      body .contactForm form .row {
+        display: flex;
+        justify-content: center;
+        padding: 12px; }
+        body .contactForm form .row .leftFormCol {
+          width: 12%;
+          padding: 15px; }
+        body .contactForm form .row .rightFormCol {
+          width: 30%; }
+          body .contactForm form .row .rightFormCol input[type=text], body .contactForm form .row .rightFormCol textarea {
+            width: 100%;
+            border: 1px solid #ccc;
+            padding: 15px;
+            resize: vertical; }
+        body .contactForm form .row input[type=submit] {
+          margin-left: 14%;
+          width: 7%;
+          background-color: orangeRed;
+          color: white;
+          padding: 12px 20px;
+          border: none;
+          border-radius: 0px;
+          cursor: pointer;
+          float: right; }
+  body footer {
+    color: white;
+    background-color: #181616;
+    text-align: center;
+    padding: 7%;
+    background-image: url("/img/footer-tlo3.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center; }
+    body footer h3 {
+      padding-bottom: 4%;
+      position: relative; }
+      body footer h3::after {
+        content: '';
+        position: absolute;
+        width: 20px;
+        border-bottom: 2px solid orangered;
+        top: 53px;
+        right: 49%; }
+    body footer .ownerInfo, body footer .companyDetails, body footer .contactDetails {
+      padding-bottom: 1.5%; }
+      body footer .ownerInfo p, body footer .companyDetails p, body footer .contactDetails p {
+        margin: 10px; }
+    body footer img {
+      width: 120px;
+      height: 50px; }
+
+/*# sourceMappingURL=style.css.map */
