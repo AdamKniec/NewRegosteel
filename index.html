@@ -9,8 +9,11 @@
 </head>
 <body>
     <nav class="navbar">
-        <img src="/newRegosteel/img/nav-logo.png" alt="">
-        <ul>
+        <!-- <div class=""> -->
+            <img src="/img/nav-logo.png" alt="">
+            <button class="hamburger"></button> 
+        <!-- </div> -->
+        <ul class="menuList">
             <li><a href="#">Start</a></li>
             <li><a href="#">O nas</a></li>
             <li><a href="#">Oferta</a></li>
@@ -25,8 +28,8 @@
             </div>
         </div>
         <div class="scrollArrowBox">
-           <img src="/newRegosteel/img/scrolDownFinalArrow.png" alt=""> 
-        </div>
+           <img src="/img/scrolDownFinalArrow.png" alt=""> 
+        </div>>
     
     </header>
     <section class="aboutUs">
@@ -66,53 +69,53 @@
         <div class="advantageBoxContainer">
             <div class="advantageBox">
                 <figure>
-                    <img src="/newRegosteel/img/icon-cog.png" alt="">
+                    <img src="/img/icon-cog.png" alt="">
                     <figcaption>Jokość</figcaption>
                 </figure>
             </div>
             <div class="advantageBox">
                 <figure>
-                    <img src="/newRegosteel/img/icon-star.png" alt="">
+                    <img src="/img/icon-star.png" alt="">
                     <figcaption>Profesjonalizm</figcaption>
                 </figure>
             </div>
             <div class="advantageBox">
                 <figure>
-                    <img src="/newRegosteel/img/icon-globe.png" alt="">
+                    <img src="/img/icon-globe.png" alt="">
                     <figcaption>Doświadczenie</figcaption>
                 </figure>
             </div>
         </div>
         </section>
-    <section class="contactForm">
+    <section class="contactForm"> <!-- Upewnic sie czy wszystkie atrybuty beda uzywane -->
         <div class="formIntro">
             <h3>Formularz Kontaktowy</h3>
             <p>Nulla nec sem in odio pulvinar vehicula eget sed est. In quis erat id sem bulputate bibendum</p>
         </div>
         <!-- <div class="container"> Czy to bedzie potrzebne? -->
-            <form action="action_page.php">
+            <form action="contactFormHandler.php" method="POST">
               <div class="row">
                 <div class="leftFormCol">
-                  <label for="fname">Imię i Nazwisko:</label>
+                  <label for="fullName">Imię i Nazwisko:</label>
                 </div>
                 <div class="rightFormCol">
-                  <input type="text" id="fname" name="firstname">
+                  <input type="text" id="fullName" name="fullName" required>
                 </div>
               </div>
               <div class="row">
                 <div class="leftFormCol">
-                  <label for="lname">Adres E-Mail:</label>
+                  <label for="email">Adres E-Mail:</label>
                 </div>
                 <div class="rightFormCol">
-                  <input type="text" id="lname" name="lastname">
+                  <input type="text" id="email" name="email" required>
                 </div>
               </div>
               <div class="row">
                 <div class="leftFormCol">
-                  <label for="subject">Treść Wiadomości:</label>
+                  <label for="messageContent">Treść Wiadomości:</label>
                 </div>
                 <div class="rightFormCol">
-                  <textarea id="subject" name="subject"></textarea>
+                  <textarea id="subject" name="messageContent" required></textarea>
                 </div>
               </div>
               <div class="row">
@@ -135,9 +138,9 @@
         </div>
         <div class="contactDetails">
             <p>m: +48 739 211 888</p>
-            <p>e: jaroslaw.krol@regosteel.pl</p>
+            <a href=""><p class="email">e: jaroslaw.krol@regosteel.pl</p></a>
         </div>
-        <img src="/newRegosteel/img/reliable-company.png" alt="">
+        <img src="/img/reliable-company.png" alt="">
     </footer>
     <script src="script.js"></script>
 </body>

@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'Avenir Roman';
-    src:url('/newRegosteel/fonts/avenir-roman.ttf');
+    src:url('/fonts/avenir-roman.ttf');
 }
 body {
     margin: 0;
@@ -19,7 +19,29 @@ body {
             img {
                 width: auto;
                 height: 30px;
-            }            
+            }
+            .hamburger {
+                display: none;
+                width: 40px;
+                height: 22px;
+                border: 0;
+                border-top: 1px solid #ffffff;
+                background: transparent;
+                position: relative;
+                    &::before, &::after {
+                        content: '';
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        border-top: 1px solid #ffffff;
+                        transform: translateY(10px);
+                    }
+                    &::after {
+                        transform: translateY(20px);
+                    }
+
+            }
             ul {
                 display: flex;
                 list-style-type: none;
@@ -36,7 +58,15 @@ body {
                             }
                     }
             }
+            //Helper class below (mobile navigation styling)
+            .mobile {
+                display: block;
+                background-color: teal;
+                width: 100%;
+                position: absolute;
+            }
     }
+    //Helper class below (sticky navigation)
     .sticky {
         position: fixed;
         background-color: black;
@@ -53,7 +83,7 @@ body {
         header {
             display: flex;
             align-items: center;
-            background-image: url("/newRegosteel/img/header-background.png");
+            background-image: url("/img/header-background.png");
             height: 90vh;
             position: relative;
             justify-content: center;
@@ -100,6 +130,7 @@ body {
             text-align: center;
                 h3 {
                     padding-top:5%;
+                    font-size: 1.6rem;
                 }
                 .detailContainer {
                     display: flex;
@@ -110,7 +141,6 @@ body {
                             position: relative;
                             width: 300px;
                             margin: 50px;
-                            color: #757575;
                                 h4 {
                                     padding-bottom: 40px;
                                         &::after {
@@ -121,6 +151,10 @@ body {
                                         top: 70px;
                                         right: 47%;
                                         }
+                                }
+                                p {
+                                    color: rgb(83, 82, 82);
+
                                 }   
                         }
                 }
@@ -133,9 +167,6 @@ body {
                 }
                 .galleryContainer {
                     display: flex;
-                        .column {
-                            
-                        }
                 }
         }
         .ourAdvantages {
@@ -143,6 +174,9 @@ body {
             text-align: center;
             color: white;
             padding: 7%;
+                h3 {
+                    font-size: 1.6rem;
+                }
                 .advantageBoxContainer{
                     display: flex;
                     justify-content: center;
@@ -153,8 +187,7 @@ body {
                             img {
                                 width: 80px;
                                 height: 80px;
-                                margin-bottom: 50px;
-                            }
+                                margin-bottom: 50px;              }
                 }
         }
         .contactForm {
@@ -171,6 +204,10 @@ body {
                         top: 90px;
                         right: 50%;
                         }
+                    h3 {
+                        font-size: 1.6rem;
+                        margin: 0;
+                    }
                 }
                     form {
                         margin-left: -15%;
@@ -193,7 +230,6 @@ body {
                                 }
                                 input[type=submit] {
                                     margin-left: 14%;
-                                    width: 7%;
                                     background-color: orangeRed;
                                     color: white;
                                     padding: 12px 20px;
@@ -210,20 +246,33 @@ body {
             background-color:rgb(24, 22, 22) ; //Dopisac
             text-align: center;
             padding: 7%;
-            background-image: url("/newRegosteel/img/Footer-tlo3.png");
+            background-image: url("/img/footer-tlo3.png");
             background-size: contain;
             background-repeat: no-repeat;
             background-position: center;
                h3 {
                     padding-bottom: 4%;
                     position: relative;
+                    font-size: 1.6rem;
                         &::after {
-                        content: '';
-                        position: absolute;
-                        width: 20px;
-                        border-bottom: 2px solid orangered;
-                        top: 53px;
-                        right: 49%;
+                            content: '';
+                            position: absolute;
+                            width: 20px;
+                            border-bottom: 2px solid orangered;
+                            top: 76px;
+                            right: 49.5%;
+                        }
+                }
+                .ownerInfo {
+                    .name {
+                        font-size: 1.6rem;
+                        font-weight: bolder;
+                    }
+                }
+                .contactDetails {
+                    .email {
+                        text-decoration: underline;
+                        color: white;
                     }
                 }
                 .ownerInfo , .companyDetails , .contactDetails {
@@ -238,4 +287,70 @@ body {
                 }
                 
         }   
+}
+///////////////////// MEDIA QUERIES//////////////////////// 
+@media only screen and (max-width: 998px) {
+    body .contactForm {
+        form {
+            margin: 0;
+                .row {
+                    flex-direction: column;
+                    align-items: center;
+                         .leftFormCol {
+                            width:auto;
+                         }
+                         .rightFormCol {
+                             width: auto;
+                                input[type = text] {
+                                    width: 300px;
+                                }
+                                textarea {
+                                    width: 300px;
+                                }
+                         }
+                }
+        }
+    }
+}
+@media only screen and (max-width: 768px) {
+    .navbar {
+        .hamburger {
+            display: block;
+        }
+        ul {
+          display: none;  
+        }
+    }
+}
+@media only screen and (max-width: 420px) {
+    body {
+        header {
+            height: 80vh;
+                .titleContainer {
+                    div {
+                        h1 {
+                        font-size: 4rem;
+                        }
+                        p {
+                            font-size: 2rem;
+                        }  
+                    }   
+                }
+        }
+        .aboutUs {
+            h3 {
+                padding-top: 28%;
+            }
+        }
+
+        footer {
+            h3 {
+                &::after {
+                    content: '';
+                    top:48px;
+                    position: absolute;
+                }
+            }
+        }   
+    }
 }
