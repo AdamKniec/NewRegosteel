@@ -8,16 +8,17 @@
 //Hamburger menu handler
 (function(){
     const hamburger = document.querySelector('.hamburger');
+    const nav = document.querySelector('.navbar');
 
-    const toggleMenu = () => {
+    const toggleMenu = (e) => {
         let menuList = document.querySelector('.menuList');
-        if(!(menuList.classList.contains('mobile'))) {
+        if(!(menuList.classList.contains('mobile')) && (e.target == hamburger)){
             menuList.classList.add('mobile');
         } else {
             menuList.classList.remove('mobile');
         }
     }
-    hamburger.addEventListener('click', toggleMenu);
+    document.body.addEventListener('click', toggleMenu);
 }());
 
 // (function() {
