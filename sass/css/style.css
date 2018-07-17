@@ -1,6 +1,6 @@
 @font-face {
   font-family: 'Avenir Roman';
-  src: url("/fonts/avenir-roman.ttf"); }
+  src: url("/newRegosteel/fonts/avenir-roman.ttf"); }
 body {
   margin: 0;
   font-family: 'Avenir Roman'; }
@@ -72,7 +72,7 @@ body {
   body header {
     display: flex;
     align-items: center;
-    background-image: url("/img/header-background.png");
+    background-image: url("/newRegosteel/img/header-background.png");
     height: 90vh;
     position: relative;
     justify-content: center;
@@ -233,7 +233,7 @@ body {
     background-color: #181616;
     text-align: center;
     padding: 7%;
-    background-image: url("/img/footer-tlo3.png");
+    background-image: url("/newRegosteel/img/Footer-tlo3.png");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center; }
