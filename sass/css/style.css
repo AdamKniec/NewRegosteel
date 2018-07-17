@@ -50,9 +50,14 @@ body {
             border-bottom: 2px solid orangered; }
     body nav .mobile {
       display: block;
-      background-color: teal;
-      width: 100%;
-      position: absolute; }
+      background-color: black;
+      width: 170px;
+      height: 100vh;
+      top: -19px;
+      left: 0;
+      position: absolute;
+      transition: all 0.2s;
+      border: 1px solid white; }
   body .sticky {
     position: fixed;
     background-color: black;
@@ -70,7 +75,9 @@ body {
     background-image: url("/img/header-background.png");
     height: 90vh;
     position: relative;
-    justify-content: center; }
+    justify-content: center;
+    background-size: cover;
+    background-position: center; }
     body header .titleContainer {
       display: flex;
       justify-content: center;
@@ -101,11 +108,22 @@ body {
       box-shadow: 0px 11px 20px 0px rgba(0, 0, 0, 0.56); }
       body header .scrollArrowBox img {
         width: 20px;
-        height: 10px; }
+        height: 10px;
+        animation: bounce 2s infinite;
+        -webkit-animation: bounce 2s infinite;
+        -moz-animation: bounce 2s infinite;
+        -o-animation: bounce 2s infinite; }
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0); }
+  40% {
+    transform: translateY(-20px); }
+  60% {
+    transform: translateY(-15px); } }
   body .aboutUs {
     text-align: center; }
     body .aboutUs h3 {
-      padding-top: 5%;
+      padding-top: 7%;
       font-size: 1.6rem; }
     body .aboutUs .detailContainer {
       display: flex;
@@ -128,7 +146,12 @@ body {
         body .aboutUs .detailContainer .detailBox p {
           color: #535252; }
   body .products {
-    background-color: red; }
+    background-color: red;
+    height: 90vh;
+    background-image: url("/img/galleryBackground.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: left; }
     body .products h3 {
       color: black;
       margin: 0; }
@@ -150,7 +173,20 @@ body {
       body .ourAdvantages .advantageBoxContainer img {
         width: 80px;
         height: 80px;
-        margin-bottom: 50px; }
+        margin-bottom: 50px;
+        -webkit-animation: spin 8s linear infinite;
+        -moz-animation: spin 8s linear infinite;
+        animation: spin 8s linear infinite; }
+@-moz-keyframes spin {
+  100% {
+    -moz-transform: rotate(360deg); } }
+@-webkit-keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg); } }
+@keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg); } }
   body .contactForm {
     text-align: center;
     padding: 7%; }
@@ -162,7 +198,7 @@ body {
         position: absolute;
         width: 20px;
         border-bottom: 2px solid orangered;
-        top: 90px;
+        top: 114px;
         right: 50%; }
       body .contactForm .formIntro h3 {
         font-size: 1.6rem;
@@ -210,9 +246,9 @@ body {
         position: absolute;
         width: 20px;
         border-bottom: 2px solid orangered;
-        top: 76px;
+        top: 50px;
         right: 49.5%; }
-    body footer .ownerInfo .name {
+    body footer .name {
       font-size: 1.6rem;
       font-weight: bolder; }
     body footer .contactDetails .email {
@@ -226,7 +262,7 @@ body {
       width: 120px;
       height: 50px; }
 
-@media only screen and (max-width: 998px) {
+@media only screen and (max-width: 1000px) {
   body .contactForm form {
     margin: 0; }
     body .contactForm form .row {
@@ -237,26 +273,31 @@ body {
       body .contactForm form .row .rightFormCol {
         width: auto; }
         body .contactForm form .row .rightFormCol input[type=text] {
-          width: 300px; }
+          width: 250px; }
         body .contactForm form .row .rightFormCol textarea {
-          width: 300px; } }
+          width: 250px; }
+      body .contactForm form .row input[type=submit] {
+        margin: 0%; } }
 @media only screen and (max-width: 768px) {
   .navbar .hamburger {
     display: block; }
   .navbar ul {
     display: none; } }
+@media only screen and (max-width: 768px) and (min-width: 421) and (orientation: landscape) {
+  body header .titleContainer div {
+    padding-top: 10%; }
+    body header .titleContainer div h1 {
+      font-size: 3rem; }
+    body header .titleContainer div p {
+      font-size: 1.5rem; } }
 @media only screen and (max-width: 420px) {
   body header {
-    height: 80vh; }
+    height: 70vh; }
     body header .titleContainer div h1 {
-      font-size: 4rem; }
+      font-size: 3rem; }
     body header .titleContainer div p {
-      font-size: 2rem; }
+      font-size: 1.5rem; }
   body .aboutUs h3 {
-    padding-top: 28%; }
-  body footer h3::after {
-    content: '';
-    top: 48px;
-    position: absolute; } }
+    padding-top: 28%; } }
 
 /*# sourceMappingURL=style.css.map */

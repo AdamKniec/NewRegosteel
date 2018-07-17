@@ -40,7 +40,6 @@ body {
                     &::after {
                         transform: translateY(20px);
                     }
-
             }
             ul {
                 display: flex;
@@ -61,9 +60,14 @@ body {
             //Helper class below (mobile navigation styling)
             .mobile {
                 display: block;
-                background-color: teal;
-                width: 100%;
+                background-color: black;
+                width: 170px;
+                height: 100vh;
+                top:-19px;
+                left: 0;
                 position: absolute;
+                transition: all 0.2s; //tu
+                border: 1px solid white;
             }
     }
     //Helper class below (sticky navigation)
@@ -87,6 +91,8 @@ body {
             height: 90vh;
             position: relative;
             justify-content: center;
+            background-size: cover;
+            background-position: center;
                 .titleContainer {
                     display: flex;
                     justify-content: center;
@@ -123,13 +129,22 @@ body {
                         img {
                             width: 20px;
                             height: 10px;
+                            animation: bounce 2s infinite;
+                            -webkit-animation: bounce 2s infinite;
+                            -moz-animation: bounce 2s infinite;
+                            -o-animation: bounce 2s infinite;
+                            @keyframes bounce {
+                                0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+                                40% {transform: translateY(-20px);}
+                                60% {transform: translateY(-15px);}
+                            }
                         }
                 } 
         }
         .aboutUs {
             text-align: center;
                 h3 {
-                    padding-top:5%;
+                    padding-top:7%;
                     font-size: 1.6rem;
                 }
                 .detailContainer {
@@ -161,6 +176,12 @@ body {
         }
         .products {
             background-color: red;
+            height: 90vh;
+            background-image: url("/img/galleryBackground.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: left;
+            
                 h3 {
                     color: black;
                     margin:0;
@@ -187,7 +208,14 @@ body {
                             img {
                                 width: 80px;
                                 height: 80px;
-                                margin-bottom: 50px;              }
+                                margin-bottom: 50px;
+                                -webkit-animation:spin 8s linear infinite;
+                                -moz-animation:spin 8s linear infinite;
+                                animation:spin 8s linear infinite;
+                                @-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+                                @-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+                                @keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+                            }
                 }
         }
         .contactForm {
@@ -201,7 +229,7 @@ body {
                         position: absolute;
                         width: 20px;
                         border-bottom: 2px solid orangered;
-                        top: 90px;
+                        top: 114px;
                         right: 50%;
                         }
                     h3 {
@@ -259,16 +287,14 @@ body {
                             position: absolute;
                             width: 20px;
                             border-bottom: 2px solid orangered;
-                            top: 76px;
+                            top: 50px;
                             right: 49.5%;
                         }
                 }
-                .ownerInfo {
                     .name {
                         font-size: 1.6rem;
                         font-weight: bolder;
                     }
-                }
                 .contactDetails {
                     .email {
                         text-decoration: underline;
@@ -288,8 +314,8 @@ body {
                 
         }   
 }
-///////////////////// MEDIA QUERIES//////////////////////// 
-@media only screen and (max-width: 998px) {
+///////////////////// MEDIA QUERIES////////////////////////
+@media only screen and (max-width: 1000px) {
     body .contactForm {
         form {
             margin: 0;
@@ -302,11 +328,14 @@ body {
                          .rightFormCol {
                              width: auto;
                                 input[type = text] {
-                                    width: 300px;
+                                    width: 250px;
                                 }
                                 textarea {
-                                    width: 300px;
+                                    width: 250px;
                                 }
+                         }
+                         input[type=submit] {
+                             margin: 0%;
                          }
                 }
         }
@@ -318,21 +347,41 @@ body {
             display: block;
         }
         ul {
-          display: none;  
+            display: none;
         }
     }
 }
+@media only screen and (max-width: 768px) and (min-width: 421) and (orientation : landscape) {
+   body {
+     header {
+       .titleContainer {
+        div {
+            padding-top: 10%;
+            h1 {
+            font-size: 3rem;
+            }
+            p {
+                font-size: 1.5rem;
+            }  
+        } 
+        }  
+    }  
+   } 
+    
+      
+}
+
 @media only screen and (max-width: 420px) {
     body {
         header {
-            height: 80vh;
+            height: 70vh;
                 .titleContainer {
                     div {
                         h1 {
-                        font-size: 4rem;
+                        font-size: 3rem;
                         }
                         p {
-                            font-size: 2rem;
+                            font-size: 1.5rem;
                         }  
                     }   
                 }
@@ -341,16 +390,6 @@ body {
             h3 {
                 padding-top: 28%;
             }
-        }
-
-        footer {
-            h3 {
-                &::after {
-                    content: '';
-                    top:48px;
-                    position: absolute;
-                }
-            }
-        }   
+        } 
     }
 }
