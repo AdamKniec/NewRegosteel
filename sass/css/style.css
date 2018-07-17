@@ -148,7 +148,7 @@ body {
   body .products {
     background-color: red;
     height: 90vh;
-    background-image: url("/img/galleryBackground.jpg");
+    background-image: url("/newRegosteel/img/galleryBackground.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: left; }
@@ -233,7 +233,7 @@ body {
     background-color: #181616;
     text-align: center;
     padding: 7%;
-    background-image: url("/newRegosteel/img/Footer-tlo3.png");
+    background-image: url("/newRegosteel/img/footer-tlo3.png");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center; }
