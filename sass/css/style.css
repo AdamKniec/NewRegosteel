@@ -1,6 +1,6 @@
 @font-face {
   font-family: 'Avenir Roman';
-  src: url("/newRegosteel/fonts/avenir-roman.ttf"); }
+  src: url("/fonts/avenir-roman.ttf"); }
 body {
   margin: 0;
   font-family: 'Avenir Roman'; }
@@ -72,7 +72,7 @@ body {
   body header {
     display: flex;
     align-items: center;
-    background-image: url("/newRegosteel/img/header-background.png");
+    background-image: url("/img/header-background.png");
     height: 90vh;
     position: relative;
     justify-content: center;
@@ -146,17 +146,55 @@ body {
         body .aboutUs .detailContainer .detailBox p {
           color: #535252; }
   body .products {
-    background-color: red;
-    height: 90vh;
-    background-image: url("/newRegosteel/img/galleryBackground.jpg");
+    background-image: url("/img/galleryBackground.jpg");
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: left; }
+    background-position: left;
+    padding-bottom: 7%; }
     body .products h3 {
-      color: black;
-      margin: 0; }
-    body .products .galleryContainer {
-      display: flex; }
+      color: white;
+      margin: 0;
+      text-align: center;
+      padding: 7%; }
+    body .products .galleryWrapper {
+      display: none; }
+    body .products .galleryWrapper.active {
+      display: flex;
+      justify-content: center; }
+      body .products .galleryWrapper.active .container {
+        margin-right: 5%;
+        max-width: 460px; }
+        body .products .galleryWrapper.active .container .main-img img {
+          width: 100%;
+          border: 5px solid tomato; }
+        body .products .galleryWrapper.active .container .imgs {
+          display: grid;
+          grid-template-columns: repeat(4, 1fr);
+          grid-gap: 5px; }
+          body .products .galleryWrapper.active .container .imgs img {
+            width: 100%; }
+      body .products .galleryWrapper.active .productDesc {
+        max-width: 460px; }
+        body .products .galleryWrapper.active .productDesc p {
+          color: white;
+          text-align: center;
+          text-align: justify; }
+    body .products .styled-select {
+      background: url(http://i62.tinypic.com/15xvbd5.png) no-repeat 96% 0;
+      height: 29px;
+      background-color: tomato;
+      overflow: hidden;
+      width: 240px;
+      margin: 0 auto;
+      margin-top: 5%; }
+      body .products .styled-select select {
+        background: transparent;
+        border: none;
+        font-size: 14px;
+        height: 29px;
+        padding: 5px;
+        /* If you add too much padding here, the options won't show in IE */
+        width: 268px; }
   body .ourAdvantages {
     background-color: orangered;
     text-align: center;
@@ -233,7 +271,7 @@ body {
     background-color: #181616;
     text-align: center;
     padding: 7%;
-    background-image: url("/newRegosteel/img/Footer-tlo3.png");
+    background-image: url("/img/Footer-tlo3.png");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center; }
@@ -279,10 +317,16 @@ body {
       body .contactForm form .row input[type=submit] {
         margin: 0%; } }
 @media only screen and (max-width: 768px) {
-  .navbar .hamburger {
+  body .navbar .hamburger {
     display: block; }
-  .navbar ul {
-    display: none; } }
+  body .navbar ul {
+    display: none; }
+  body .navbar .mobile {
+    display: block; }
+  body .products .galleryWrapper {
+    flex-direction: column; }
+    body .products .galleryWrapper .container {
+      margin-right: 3%; } }
 @media only screen and (max-width: 768px) and (min-width: 421) and (orientation: landscape) {
   body header .titleContainer div {
     padding-top: 10%; }

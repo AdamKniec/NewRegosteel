@@ -21,12 +21,29 @@
     document.body.addEventListener('click', toggleMenu);
 }());
 
-// (function() {
-//     const hamburger = document.querySelector('.hamburger');
-    
-//     const toggleMenu = () => {
-//         let menuList = document.querySelector('.mobileList');
-//         (!(menuList.classList.contains('mobile'))) ? (menuList.classList.add('mobile')) : (menuList.classList.remove('mobile'));
-//     }
-//         hamburger.addEventListener('click', toggleMenu);
-// }());
+// GalleryHandler
+(function (){
+    const current = document.querySelector("#current");
+    const imgsBox = document.querySelector('.imgs');
+  
+    console.log(imgsBox);
+  imgsBox.addEventListener('click', function(e) {
+    if (e.target.nodeName === ("IMG")) {
+            current.src = e.target.src;
+        };
+  })
+  }());
+//gallerySwitcher
+let select = document.querySelector('.select');
+
+select.addEventListener('change', function(a) {
+    let index = select.selectedIndex;
+    let galleries = document.querySelectorAll('.galleryWrapper');
+        galleries.forEach((a,i) => {
+            if(i == index) {
+                a.className = "galleryWrapper active";
+            } else {
+                a.className = "galleryWrapper";
+            }
+        })
+})
