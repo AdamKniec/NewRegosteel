@@ -23,16 +23,20 @@
 
 // GalleryHandler
 (function (){
-    const current = document.querySelector("#current");
-    const imgsBox = document.querySelector('.imgs');
+    const currentImage = document.querySelectorAll(".main-img img");
+    const images = document.querySelectorAll('.imgs');
   
-    console.log(imgsBox);
-  imgsBox.addEventListener('click', function(e) {
-    if (e.target.nodeName === ("IMG")) {
-            current.src = e.target.src;
-        };
-  })
-  }());
+    console.log(images,currentImage);
+    images.forEach((element)=>{
+        element.addEventListener('click', function(e) {
+            let boxNumber = this.className.slice(-1)-1;
+            if (e.target.nodeName === ("IMG")) {
+                    currentImage[boxNumber].src = e.target.src;
+            };
+        })
+    })
+}());
+
 //gallerySwitcher
 let select = document.querySelector('.select');
 
