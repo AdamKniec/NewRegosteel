@@ -1,6 +1,6 @@
 @font-face {
   font-family: 'Avenir Roman';
-  src: url("/newRegosteel/fonts/avenir-roman.ttf"); }
+  src: url("/fonts/avenir-roman.ttf"); }
 body {
   margin: 0;
   font-family: 'Avenir Roman'; }
@@ -25,7 +25,9 @@ body {
       border: 0;
       border-top: 1px solid #ffffff;
       background: transparent;
-      position: relative; }
+      position: relative;
+      transition: 0.2s;
+      cursor: pointer; }
       body nav .hamburger::before, body nav .hamburger::after {
         content: '';
         position: absolute;
@@ -36,6 +38,11 @@ body {
         transform: translateY(10px); }
       body nav .hamburger::after {
         transform: translateY(20px); }
+    body nav .animatedMobileMenu {
+      transition: 0.2s;
+      transform: skew(45deg); }
+      body nav .animatedMobileMenu::before {
+        display: none; }
     body nav ul {
       display: flex;
       list-style-type: none; }
@@ -72,7 +79,7 @@ body {
   body header {
     display: flex;
     align-items: center;
-    background-image: url("/newRegosteel/img/header-background.png");
+    background-image: url("/img/header-background.jpg");
     height: 90vh;
     position: relative;
     justify-content: center;
@@ -91,9 +98,11 @@ body {
           padding: 0;
           margin: 0; }
         body header .titleContainer div h1 {
-          font-size: 5rem; }
+          font-size: 5.1rem; }
         body header .titleContainer div p {
           font-size: 3rem; }
+          body header .titleContainer div p .partnerName {
+            font-weight: bolder; }
     body header .scrollArrowBox {
       display: flex;
       align-items: center;
@@ -108,18 +117,7 @@ body {
       box-shadow: 0px 11px 20px 0px rgba(0, 0, 0, 0.56); }
       body header .scrollArrowBox img {
         width: 20px;
-        height: 10px;
-        animation: bounce 2s infinite;
-        -webkit-animation: bounce 2s infinite;
-        -moz-animation: bounce 2s infinite;
-        -o-animation: bounce 2s infinite; }
-@keyframes bounce {
-  0%, 20%, 50%, 80%, 100% {
-    transform: translateY(0); }
-  40% {
-    transform: translateY(-20px); }
-  60% {
-    transform: translateY(-15px); } }
+        height: 10px; }
   body .aboutUs {
     text-align: center; }
     body .aboutUs h3 {
@@ -144,30 +142,32 @@ body {
             top: 70px;
             right: 47%; }
         body .aboutUs .detailContainer .detailBox p {
-          color: #535252; }
+          color: #706f6f; }
   body .products {
     background-color: red;
-    height: 90vh;
-    background-image: url("/newRegosteel/img/galleryBackground.jpg");
+    background-image: url("/img/galleryBackground.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: left;
-    padding-bottom: 7%; }
+    padding-bottom: 3%; }
     body .products h3 {
       color: white;
       margin: 0;
       text-align: center;
-      padding: 7%; }
+      padding: 5%;
+      font-size: 1.6rem; }
     body .products .galleryWrapper {
       display: none; }
     body .products .galleryWrapper.active {
       display: flex;
-      justify-content: center; }
+      justify-content: center;
+      margin: 2%; }
       body .products .galleryWrapper.active .container {
         margin-right: 5%;
-        max-width: 460px; }
+        max-width: 500px; }
         body .products .galleryWrapper.active .container .main-img img {
           width: 100%;
+          box-sizing: border-box;
           border: 5px solid tomato; }
         body .products .galleryWrapper.active .container .imgs {
           display: grid;
@@ -176,11 +176,11 @@ body {
           body .products .galleryWrapper.active .container .imgs img {
             width: 100%; }
       body .products .galleryWrapper.active .productDesc {
-        max-width: 460px; }
-        body .products .galleryWrapper.active .productDesc p {
-          color: white;
-          text-align: center;
-          text-align: justify; }
+        max-width: 500px; }
+        body .products .galleryWrapper.active .productDesc div {
+          color: white; }
+          body .products .galleryWrapper.active .productDesc div ul {
+            list-style-type: none; }
     body .products .styled-select {
       background: url(http://i62.tinypic.com/15xvbd5.png) no-repeat 96% 0;
       height: 29px;
@@ -213,26 +213,15 @@ body {
       body .ourAdvantages .advantageBoxContainer img {
         width: 80px;
         height: 80px;
-        margin-bottom: 50px;
-        -webkit-animation: spin 8s linear infinite;
-        -moz-animation: spin 8s linear infinite;
-        animation: spin 8s linear infinite; }
-@-moz-keyframes spin {
-  100% {
-    -moz-transform: rotate(360deg); } }
-@-webkit-keyframes spin {
-  100% {
-    -webkit-transform: rotate(360deg); } }
-@keyframes spin {
-  100% {
-    -webkit-transform: rotate(360deg);
-    transform: rotate(360deg); } }
+        margin-bottom: 50px; }
   body .contactForm {
     text-align: center;
     padding: 7%; }
     body .contactForm .formIntro {
       padding-bottom: 60px;
       position: relative; }
+      body .contactForm .formIntro p {
+        color: #706f6f; }
       body .contactForm .formIntro::after {
         content: '';
         position: absolute;
@@ -251,7 +240,8 @@ body {
         padding: 12px; }
         body .contactForm form .row .leftFormCol {
           width: 12%;
-          padding: 15px; }
+          padding: 15px;
+          color: #706f6f; }
         body .contactForm form .row .rightFormCol {
           width: 30%; }
           body .contactForm form .row .rightFormCol input[type=text], body .contactForm form .row .rightFormCol textarea {
@@ -273,7 +263,7 @@ body {
     background-color: #181616;
     text-align: center;
     padding: 7%;
-    background-image: url("/newRegosteel/img/Footer-tlo3.png");
+    background-image: url("/img/footer-background.png");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center; }
@@ -325,10 +315,16 @@ body {
     display: none; }
   body .navbar .mobile {
     display: block; }
-  body .products .galleryWrapper {
+  body .products {
+    display: flex;
+    align-items: center;
     flex-direction: column; }
-    body .products .galleryWrapper .container {
-      margin-right: 3%; } }
+    body .products .galleryWrapper.active {
+      flex-direction: column; }
+      body .products .galleryWrapper.active .container {
+        margin: 0; }
+    body .products .styled-select {
+      margin-bottom: 5%; } }
 @media only screen and (max-width: 768px) and (min-width: 421) and (orientation: landscape) {
   body header .titleContainer div {
     padding-top: 10%; }

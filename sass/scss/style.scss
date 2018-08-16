@@ -28,6 +28,8 @@ body {
                 border-top: 1px solid #ffffff;
                 background: transparent;
                 position: relative;
+                transition: 0.2s;
+                cursor: pointer;
                     &::before, &::after {
                         content: '';
                         position: absolute;
@@ -40,6 +42,13 @@ body {
                     &::after {
                         transform: translateY(20px);
                     }
+            }
+            .animatedMobileMenu {
+                transition: 0.2s;
+                transform: skew(45deg);
+                &::before {
+                    display: none;
+                }
             }
             ul {
                 display: flex;
@@ -88,7 +97,7 @@ body {
         header {
             display: flex;
             align-items: center;
-            background-image: url("/img/header-background.png");
+            background-image: url("/img/header-background.jpg");
             height: 90vh;
             position: relative;
             justify-content: center;
@@ -108,10 +117,13 @@ body {
                                     margin: 0;
                                 }
                                 h1 {
-                                    font-size: 5rem;
+                                    font-size: 5.1rem;
                                 }
                                 p {
                                     font-size: 3rem;
+                                       .partnerName {
+                                            font-weight: bolder;
+                                       } 
                                 }
                         }
                 }
@@ -130,15 +142,6 @@ body {
                         img {
                             width: 20px;
                             height: 10px;
-                            animation: bounce 2s infinite;
-                            -webkit-animation: bounce 2s infinite;
-                            -moz-animation: bounce 2s infinite;
-                            -o-animation: bounce 2s infinite;
-                            @keyframes bounce {
-                                0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
-                                40% {transform: translateY(-20px);}
-                                60% {transform: translateY(-15px);}
-                            }
                         }
                 } 
         }
@@ -169,7 +172,7 @@ body {
                                         }
                                 }
                                 p {
-                                    color: rgb(83, 82, 82);
+                                    color: rgb(112, 111, 111);
 
                                 }   
                         }
@@ -177,17 +180,17 @@ body {
         }
         .products {
             background-color: red;
-            height: 90vh;
             background-image: url("/img/galleryBackground.jpg");
             background-size: cover;
             background-repeat: no-repeat;
             background-position: left;
-            padding-bottom: 7%;
+            padding-bottom: 3%;
                 h3 {
                     color: white;
                     margin:0;
                     text-align: center;
-                    padding: 7%;
+                    padding: 5%;
+                    font-size: 1.6rem;
                 }
                 .galleryWrapper{
                     display: none;
@@ -195,12 +198,14 @@ body {
                 .galleryWrapper.active {
                     display: flex;
                     justify-content: center;
+                    margin:2%;
                     .container {
                         margin-right: 5%;
-                        max-width: 460px;
+                        max-width: 500px;
                             .main-img {
                                 img {
                                     width:100%;
+                                    box-sizing: border-box;
                                     border: 5px solid tomato;
                                 }
                             }
@@ -214,11 +219,13 @@ body {
                             }
                         }
                         .productDesc {
-                            max-width: 460px;
-                                p {
+                            max-width: 500px;
+                                div {
                                     color: white;
-                                    text-align: center;
-                                    text-align: justify;
+                                    ul {
+                                        list-style-type: none;
+                                        
+                                    }
                                 }
                         }
                 }
@@ -240,28 +247,6 @@ body {
                      }
                     
                  }
-                //  .styled-select select {
-                //     background: transparent;
-                //     border: none;
-                //     font-size: 14px;
-                //     height: 29px;
-                //     padding: 5px; /* If you add too much padding here, the options won't show in IE */
-                //     width: 268px;
-                //  }
-                // .productCategory {
-                //     display: flex;
-                //     color: white;
-                //     justify-content: center;
-                //     padding-top: 3%;
-                //         p {
-                //             padding: 20px;
-                //                 &:hover {
-                //                     border-bottom: 2px solid orangered;
-                //                 }
-                //         }
-                // }
-
-                
         }
         .ourAdvantages {
             background-color:orangered;
@@ -282,12 +267,6 @@ body {
                                 width: 80px;
                                 height: 80px;
                                 margin-bottom: 50px;
-                                -webkit-animation:spin 8s linear infinite;
-                                -moz-animation:spin 8s linear infinite;
-                                animation:spin 8s linear infinite;
-                                @-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
-                                @-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
-                                @keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
                             }
                 }
         }
@@ -297,6 +276,9 @@ body {
                 .formIntro {
                     padding-bottom: 60px;
                     position: relative;
+                    p {
+                        color: #706f6f;
+                    }
                     &::after {
                         content: '';
                         position: absolute;
@@ -319,6 +301,7 @@ body {
                                 .leftFormCol {
                                     width: 12%;
                                     padding: 15px;
+                                    color: #706f6f;
                                 }
                                 .rightFormCol {
                                     width: 30%;
@@ -347,7 +330,7 @@ body {
             background-color:rgb(24, 22, 22) ; //Dopisac
             text-align: center;
             padding: 7%;
-            background-image: url("/img/Footer-tlo3.png");
+            background-image: url("/img/footer-background.png");
             background-size: contain;
             background-repeat: no-repeat;
             background-position: center;
@@ -427,16 +410,25 @@ body {
             .mobile {
                 display: block;
             }
+            
         }
     
         .products {
-            .galleryWrapper {
-                flex-direction: column;
-                    .container {
-                        margin-right: 3%;
-                        
-                    }
-            }  
+            display: flex;
+            align-items: center;
+            flex-direction: column;    
+                .galleryWrapper.active {
+                    flex-direction: column;
+                    // margin: 2%;
+                        .container {
+                            // margin-right: 3%;
+                            margin:0;
+                            
+                        }
+                }
+                .styled-select {
+                    margin-bottom: 5%;
+                }
         }
     }
     
