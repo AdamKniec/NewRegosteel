@@ -5,7 +5,7 @@
     window.addEventListener('scroll', animeteNavbar);
 }());
 
-//Hamburger menu handler
+//MobileMenu handler
 (function(){
     const hamburger = document.querySelector('.hamburger');
     const nav = document.querySelector('.navbar');
@@ -14,19 +14,18 @@
         let menuList = document.querySelector('.menuList');
         if(!(menuList.classList.contains('mobile')) && (e.target == hamburger)){
             menuList.classList.add('mobile');
+            hamburger.classList.add('animatedMobileMenu');
         } else {
             menuList.classList.remove('mobile');
+            hamburger.classList.remove('animatedMobileMenu');
         }
     }
     document.body.addEventListener('click', toggleMenu);
 }());
-
-// GalleryHandler
+//GalleryHandler
 (function (){
     const currentImage = document.querySelectorAll(".main-img img");
     const images = document.querySelectorAll('.imgs');
-  
-    console.log(images,currentImage);
     images.forEach((element)=>{
         element.addEventListener('click', function(e) {
             let boxNumber = this.className.slice(-1)-1;
@@ -36,18 +35,19 @@
         })
     })
 }());
-
 //gallerySwitcher
-let select = document.querySelector('.select');
+(function(){
+    let select = document.querySelector('.select');
+    select.addEventListener('change', function(a) {
+        let index = select.selectedIndex;
+        let galleries = document.querySelectorAll('.galleryWrapper');
+            galleries.forEach((a,i) => {
+                if(i == index) {
+                    a.className = "galleryWrapper active";
+                } else {
+                    a.className = "galleryWrapper";
+                }
+            })
+    })
+}());
 
-select.addEventListener('change', function(a) {
-    let index = select.selectedIndex;
-    let galleries = document.querySelectorAll('.galleryWrapper');
-        galleries.forEach((a,i) => {
-            if(i == index) {
-                a.className = "galleryWrapper active";
-            } else {
-                a.className = "galleryWrapper";
-            }
-        })
-})
