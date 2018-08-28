@@ -123,26 +123,12 @@ body {
     body .aboutUs h3 {
       padding-top: 7%;
       font-size: 1.6rem; }
-    body .aboutUs .detailContainer {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      padding-bottom: 5%; }
-      body .aboutUs .detailContainer .detailBox {
-        position: relative;
-        width: 300px;
-        margin: 50px; }
-        body .aboutUs .detailContainer .detailBox h4 {
-          padding-bottom: 40px; }
-          body .aboutUs .detailContainer .detailBox h4::after {
-            content: '';
-            position: absolute;
-            width: 20px;
-            border-bottom: 2px solid orangered;
-            top: 70px;
-            right: 47%; }
-        body .aboutUs .detailContainer .detailBox p {
-          color: #706f6f; }
+    body .aboutUs .companyDescription {
+      width: 50%;
+      margin: 0 auto;
+      padding-bottom: 7%;
+      color: #706f6f;
+      font-size: 1.2rem; }
   body .products {
     background-color: red;
     background-image: url("/img/galleryBackground.jpg");
@@ -167,8 +153,7 @@ body {
         max-width: 500px; }
         body .products .galleryWrapper.active .container .main-img img {
           width: 100%;
-          box-sizing: border-box;
-          border: 5px solid tomato; }
+          box-sizing: border-box; }
         body .products .galleryWrapper.active .container .imgs {
           display: grid;
           grid-template-columns: repeat(4, 1fr);
@@ -209,11 +194,15 @@ body {
       justify-content: center;
       flex-wrap: wrap; }
       body .ourAdvantages .advantageBoxContainer .advantageBox {
-        padding: 50px; }
+        width: 300px; }
+        body .ourAdvantages .advantageBoxContainer .advantageBox .advantageExample {
+          display: block;
+          font-size: 1.4rem;
+          margin-bottom: 20px; }
       body .ourAdvantages .advantageBoxContainer img {
         width: 80px;
         height: 80px;
-        margin-bottom: 50px; }
+        margin-bottom: 20px; }
   body .contactForm {
     text-align: center;
     padding: 7%; }
@@ -315,6 +304,9 @@ body {
     display: none; }
   body .navbar .mobile {
     display: block; }
+  body .aboutUs .companyDescription {
+    width: 90%;
+    text-align: justify; }
   body .products {
     display: flex;
     align-items: center;

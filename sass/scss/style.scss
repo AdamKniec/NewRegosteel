@@ -151,31 +151,38 @@ body {
                     padding-top:7%;
                     font-size: 1.6rem;
                 }
-                .detailContainer {
-                    display: flex;
-                    flex-wrap: wrap;
-                    justify-content: center;
-                    padding-bottom: 5%;
-                        .detailBox {
-                            position: relative;
-                            width: 300px;
-                            margin: 50px;
-                                h4 {
-                                    padding-bottom: 40px;
-                                        &::after {
-                                        content: '';
-                                        position: absolute;
-                                        width: 20px;
-                                        border-bottom: 2px solid orangered;
-                                        top: 70px;
-                                        right: 47%;
-                                        }
-                                }
-                                p {
-                                    color: rgb(112, 111, 111);
+                // .detailContainer {
+                //     display: flex;
+                //     flex-wrap: wrap;
+                //     justify-content: center;
+                //     padding-bottom: 5%;
+                //         .detailBox {
+                //             position: relative;
+                //             width: 300px;
+                //             margin: 50px;
+                //                 h4 {
+                //                     padding-bottom: 40px;
+                //                         &::after {
+                //                         content: '';
+                //                         position: absolute;
+                //                         width: 20px;
+                //                         border-bottom: 2px solid orangered;
+                //                         top: 70px;
+                //                         right: 47%;
+                //                         }
+                //                 }
+                //                 p {
+                //                     color: rgb(112, 111, 111);
 
-                                }   
-                        }
+                //                 }   
+                //         }
+                // }
+                .companyDescription {
+                    width: 50%;
+                    margin: 0 auto;
+                    padding-bottom: 7%;
+                    color: #706f6f;
+                    font-size: 1.2rem;
                 }
         }
         .products {
@@ -206,7 +213,7 @@ body {
                                 img {
                                     width:100%;
                                     box-sizing: border-box;
-                                    border: 5px solid tomato;
+                                    // border: 5px solid tomato;
                                 }
                             }
                             .imgs {
@@ -261,12 +268,19 @@ body {
                     justify-content: center;
                     flex-wrap: wrap;
                         .advantageBox {
-                            padding: 50px;
+                            // padding: 50px;
+                            width: 300px;
+                                .advantageExample {
+                                    display: block;
+                                    font-size: 1.4rem;
+                                    margin-bottom: 20px;
+                                    
+                                }
                         }
                             img {
                                 width: 80px;
                                 height: 80px;
-                                margin-bottom: 50px;
+                                margin-bottom: 20px;
                             }
                 }
         }
@@ -412,7 +426,13 @@ body {
             }
             
         }
-    
+        .aboutUs {
+            .companyDescription {
+                width: 90%;
+                text-align: justify;
+            }    
+        }
+        
         .products {
             display: flex;
             align-items: center;
