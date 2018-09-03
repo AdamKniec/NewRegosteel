@@ -178,11 +178,12 @@ body {
                 //         }
                 // }
                 .companyDescription {
-                    width: 50%;
+                    width: 40%;
                     margin: 0 auto;
                     padding-bottom: 7%;
                     color: #706f6f;
                     font-size: 1.2rem;
+                    text-align: justify;
                 }
         }
         .products {
@@ -227,6 +228,10 @@ body {
                         }
                         .productDesc {
                             max-width: 500px;
+                            height: 400px;
+                            overflow: scroll;
+                            display: flex;
+                            align-items: center;
                                 div {
                                     color: white;
                                     ul {

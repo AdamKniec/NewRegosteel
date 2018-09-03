@@ -1,6 +1,6 @@
 @font-face {
   font-family: 'Avenir Roman';
-  src: url("/newRegosteel/fonts/avenir-roman.ttf"); }
+  src: url("/fonts/avenir-roman.ttf"); }
 body {
   margin: 0;
   font-family: 'Avenir Roman'; }
@@ -79,7 +79,7 @@ body {
   body header {
     display: flex;
     align-items: center;
-    background-image: url("/newRegosteel/img/header-background.jpg");
+    background-image: url("/img/header-background.jpg");
     height: 90vh;
     position: relative;
     justify-content: center;
@@ -124,14 +124,15 @@ body {
       padding-top: 7%;
       font-size: 1.6rem; }
     body .aboutUs .companyDescription {
-      width: 50%;
+      width: 40%;
       margin: 0 auto;
       padding-bottom: 7%;
       color: #706f6f;
-      font-size: 1.2rem; }
+      font-size: 1.2rem;
+      text-align: justify; }
   body .products {
     background-color: red;
-    background-image: url("/newRegosteel/img/galleryBackground.jpg");
+    background-image: url("/img/galleryBackground.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: left;
@@ -161,7 +162,11 @@ body {
           body .products .galleryWrapper.active .container .imgs img {
             width: 100%; }
       body .products .galleryWrapper.active .productDesc {
-        max-width: 500px; }
+        max-width: 500px;
+        height: 400px;
+        overflow: scroll;
+        display: flex;
+        align-items: center; }
         body .products .galleryWrapper.active .productDesc div {
           color: white; }
           body .products .galleryWrapper.active .productDesc div ul {
@@ -252,7 +257,7 @@ body {
     background-color: #181616;
     text-align: center;
     padding: 7%;
-    background-image: url("/newRegosteel/img/footer-background.png");
+    background-image: url("/img/footer-background.png");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center; }
