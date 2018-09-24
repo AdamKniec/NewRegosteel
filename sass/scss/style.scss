@@ -178,7 +178,7 @@ body {
                 //         }
                 // }
                 .companyDescription {
-                    width: 40%;
+                    width: 60%;
                     margin: 0 auto;
                     padding-bottom: 7%;
                     color: #706f6f;
@@ -229,7 +229,7 @@ body {
                         .productDesc {
                             max-width: 500px;
                             height: 400px;
-                            overflow: scroll;
+                            // overflow: scroll;
                             display: flex;
                             align-items: center;
                                 div {
@@ -450,6 +450,11 @@ body {
                             margin:0;
                             
                         }
+                        .productDesc {
+                            ul {
+                                padding:0;
+                            }
+                        }
                 }
                 .styled-select {
                     margin-bottom: 5%;
@@ -496,6 +501,13 @@ body {
             h3 {
                 padding-top: 28%;
             }
-        } 
+        }
+        .contactForm {
+            .formIntro {
+                &::after {
+                    top: 160px;
+                }
+            }   
+        }
     }
 }
