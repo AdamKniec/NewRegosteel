@@ -228,14 +228,15 @@ body {
                         }
                         .productDesc {
                             max-width: 500px;
-                            height: 400px;
-                            // overflow: scroll;
+                            height: 300px;
+                            overflow: scroll;
                             display: flex;
                             align-items: center;
                                 div {
                                     color: white;
                                     ul {
                                         list-style-type: none;
+                                        padding: 5px;
                                         
                                     }
                                 }
@@ -273,13 +274,16 @@ body {
                     justify-content: center;
                     flex-wrap: wrap;
                         .advantageBox {
-                            // padding: 50px;
-                            width: 300px;
+                            width: 350px;
+                                &:nth-child(2) {
+                                    img {
+                                        width: 110px;
+                                    }   
+                                }
                                 .advantageExample {
                                     display: block;
                                     font-size: 1.4rem;
                                     margin-bottom: 20px;
-                                    
                                 }
                         }
                             img {
@@ -287,6 +291,7 @@ body {
                                 height: 80px;
                                 margin-bottom: 20px;
                             }
+
                 }
         }
         .contactForm {
@@ -371,10 +376,20 @@ body {
                         font-weight: bolder;
                     }
                 .contactDetails {
-                    .email {
-                        text-decoration: underline;
-                        color: white;
+                    div {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        img {
+                            width: 15px;
+                            height: 15px;
+                        }
+                        .email {
+                            text-decoration: underline;
+                            color: white;
+                        }
                     }
+                    
                 }
                 .ownerInfo , .companyDetails , .contactDetails {
                     padding-bottom: 1.5%;
@@ -416,7 +431,6 @@ body {
     }
 }
 @media only screen and (max-width: 768px) {
-
     body {
         .navbar {
             .hamburger {
@@ -424,36 +438,26 @@ body {
             }
             ul {
                 display: none;
-                
             }
             .mobile {
                 display: block;
             }
-            
         }
         .aboutUs {
             .companyDescription {
                 width: 90%;
                 text-align: justify;
+                font-size: 1rem;
             }    
         }
-        
         .products {
             display: flex;
             align-items: center;
             flex-direction: column;    
                 .galleryWrapper.active {
                     flex-direction: column;
-                    // margin: 2%;
                         .container {
-                            // margin-right: 3%;
                             margin:0;
-                            
-                        }
-                        .productDesc {
-                            ul {
-                                padding:0;
-                            }
                         }
                 }
                 .styled-select {
@@ -461,9 +465,6 @@ body {
                 }
         }
     }
-    
-    
-
 }
 @media only screen and (max-width: 768px) and (min-width: 421) and (orientation : landscape) {
    body {
@@ -479,7 +480,7 @@ body {
             }  
         } 
         }  
-    }  
+    }
    }  
 }
 @media only screen and (max-width: 420px) {
@@ -489,7 +490,7 @@ body {
                 .titleContainer {
                     div {
                         h1 {
-                        font-size: 3rem;
+                            font-size: 3rem;
                         }
                         p {
                             font-size: 1.5rem;

@@ -1,6 +1,6 @@
 @font-face {
   font-family: 'Avenir Roman';
-  src: url("/newRegosteel/fonts/avenir-roman.ttf"); }
+  src: url("/fonts/avenir-roman.ttf"); }
 body {
   margin: 0;
   font-family: 'Avenir Roman'; }
@@ -79,7 +79,7 @@ body {
   body header {
     display: flex;
     align-items: center;
-    background-image: url("/newRegosteel/img/header-background.jpg");
+    background-image: url("/img/header-background.jpg");
     height: 90vh;
     position: relative;
     justify-content: center;
@@ -132,7 +132,7 @@ body {
       text-align: justify; }
   body .products {
     background-color: red;
-    background-image: url("/newRegosteel/img/galleryBackground.jpg");
+    background-image: url("/img/galleryBackground.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: left;
@@ -163,13 +163,15 @@ body {
             width: 100%; }
       body .products .galleryWrapper.active .productDesc {
         max-width: 500px;
-        height: 400px;
+        height: 300px;
+        overflow: scroll;
         display: flex;
         align-items: center; }
         body .products .galleryWrapper.active .productDesc div {
           color: white; }
           body .products .galleryWrapper.active .productDesc div ul {
-            list-style-type: none; }
+            list-style-type: none;
+            padding: 5px; }
     body .products .styled-select {
       background: url(http://i62.tinypic.com/15xvbd5.png) no-repeat 96% 0;
       height: 29px;
@@ -198,7 +200,9 @@ body {
       justify-content: center;
       flex-wrap: wrap; }
       body .ourAdvantages .advantageBoxContainer .advantageBox {
-        width: 300px; }
+        width: 350px; }
+        body .ourAdvantages .advantageBoxContainer .advantageBox:nth-child(2) img {
+          width: 110px; }
         body .ourAdvantages .advantageBoxContainer .advantageBox .advantageExample {
           display: block;
           font-size: 1.4rem;
@@ -256,7 +260,7 @@ body {
     background-color: #181616;
     text-align: center;
     padding: 7%;
-    background-image: url("/newRegosteel/img/footer-background.png");
+    background-image: url("/img/footer-background.png");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center; }
@@ -274,9 +278,16 @@ body {
     body footer .name {
       font-size: 1.6rem;
       font-weight: bolder; }
-    body footer .contactDetails .email {
-      text-decoration: underline;
-      color: white; }
+    body footer .contactDetails div {
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+      body footer .contactDetails div img {
+        width: 15px;
+        height: 15px; }
+      body footer .contactDetails div .email {
+        text-decoration: underline;
+        color: white; }
     body footer .ownerInfo, body footer .companyDetails, body footer .contactDetails {
       padding-bottom: 1.5%; }
       body footer .ownerInfo p, body footer .companyDetails p, body footer .contactDetails p {
@@ -310,7 +321,8 @@ body {
     display: block; }
   body .aboutUs .companyDescription {
     width: 90%;
-    text-align: justify; }
+    text-align: justify;
+    font-size: 1rem; }
   body .products {
     display: flex;
     align-items: center;
@@ -319,8 +331,6 @@ body {
       flex-direction: column; }
       body .products .galleryWrapper.active .container {
         margin: 0; }
-      body .products .galleryWrapper.active .productDesc ul {
-        padding: 0; }
     body .products .styled-select {
       margin-bottom: 5%; } }
 @media only screen and (max-width: 768px) and (min-width: 421) and (orientation: landscape) {
