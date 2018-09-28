@@ -79,7 +79,7 @@ body {
   body header {
     display: flex;
     align-items: center;
-    background-image: url("/img/header-background.jpg");
+    background-image: url("/newRegosteel/img/header-background.jpg");
     height: 90vh;
     position: relative;
     justify-content: center;
