@@ -2,9 +2,15 @@
     font-family: 'Avenir Roman';
     src:url('/fonts/avenir-roman.ttf');
 }
+@font-face {
+    font-family: 'Montserrat-Regular';
+    src: '/fonts/Montserrat-Regular.ttf';
+}
 body {
     margin: 0;
-    font-family: 'Avenir Roman';
+    // font-family: 'Avenir Roman';
+    font-family: 'Montserrat-Regular', sans-serif;
+    font-weight: lighter;
     nav {
         display: flex;
         justify-content: space-around;
@@ -118,6 +124,7 @@ body {
                                 }
                                 h1 {
                                     font-size: 5.1rem;
+                                    font-family: 'avenir-roman'
                                 }
                                 p {
                                     font-size: 3rem;
@@ -151,32 +158,6 @@ body {
                     padding-top:7%;
                     font-size: 1.6rem;
                 }
-                // .detailContainer {
-                //     display: flex;
-                //     flex-wrap: wrap;
-                //     justify-content: center;
-                //     padding-bottom: 5%;
-                //         .detailBox {
-                //             position: relative;
-                //             width: 300px;
-                //             margin: 50px;
-                //                 h4 {
-                //                     padding-bottom: 40px;
-                //                         &::after {
-                //                         content: '';
-                //                         position: absolute;
-                //                         width: 20px;
-                //                         border-bottom: 2px solid orangered;
-                //                         top: 70px;
-                //                         right: 47%;
-                //                         }
-                //                 }
-                //                 p {
-                //                     color: rgb(112, 111, 111);
-
-                //                 }   
-                //         }
-                // }
                 .companyDescription {
                     width: 60%;
                     margin: 0 auto;
@@ -214,7 +195,6 @@ body {
                                 img {
                                     width:100%;
                                     box-sizing: border-box;
-                                    // border: 5px solid tomato;
                                 }
                             }
                             .imgs {
@@ -223,6 +203,9 @@ body {
                                 grid-gap:5px;
                                     img {
                                         width:100%;
+                                            &:hover {
+                                                cursor: pointer;
+                                            }
                                     }
                             }
                         }
@@ -230,7 +213,6 @@ body {
                             max-width: 500px;
                             height: 300px;
                             overflow: scroll;
-                            display: flex;
                             align-items: center;
                                 div {
                                     color: white;
@@ -255,7 +237,7 @@ body {
                         border: none;
                         font-size: 14px;
                         height: 29px;
-                        padding: 5px; /* If you add too much padding here, the options won't show in IE */
+                        padding: 5px;
                         width: 268px;
                      }
                     
@@ -284,6 +266,7 @@ body {
                                     display: block;
                                     font-size: 1.4rem;
                                     margin-bottom: 20px;
+                                    font-weight: bold;
                                 }
                         }
                             img {
@@ -404,6 +387,17 @@ body {
         }   
 }
 ///////////////////// MEDIA QUERIES////////////////////////
+@media only screen and (min-width: 1000px) {
+    .contactForm {
+        .formIntro {
+            p {
+                width: 70%;
+                margin: 0 auto;
+                padding-top: 20px;
+            }
+        }
+    }
+}
 @media only screen and (max-width: 1000px) {
     body .contactForm {
         form {
@@ -466,6 +460,24 @@ body {
         }
     }
 }
+@media only screen and (max-width: 768px) and (orientation: landscape){
+    body {
+        header {
+            .titleContainer {
+                div {
+                    h1 {
+                        font-size: 3.1rem;
+                    }
+                    p {
+                        font-size: 2rem;
+                    } 
+                }
+            }   
+        }
+         
+    }
+    
+}
 @media only screen and (max-width: 768px) and (min-width: 421) and (orientation : landscape) {
    body {
      header {
@@ -506,7 +518,7 @@ body {
         .contactForm {
             .formIntro {
                 &::after {
-                    top: 160px;
+                    top: 200px;
                 }
             }   
         }

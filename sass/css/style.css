@@ -1,9 +1,13 @@
 @font-face {
   font-family: 'Avenir Roman';
   src: url("/fonts/avenir-roman.ttf"); }
+@font-face {
+  font-family: 'Montserrat-Regular';
+  src: '/fonts/Montserrat-Regular.ttf'; }
 body {
   margin: 0;
-  font-family: 'Avenir Roman'; }
+  font-family: 'Montserrat-Regular', sans-serif;
+  font-weight: lighter; }
   body nav {
     display: flex;
     justify-content: space-around;
@@ -98,7 +102,8 @@ body {
           padding: 0;
           margin: 0; }
         body header .titleContainer div h1 {
-          font-size: 5.1rem; }
+          font-size: 5.1rem;
+          font-family: "avenir-roman"; }
         body header .titleContainer div p {
           font-size: 3rem; }
           body header .titleContainer div p .partnerName {
@@ -161,11 +166,12 @@ body {
           grid-gap: 5px; }
           body .products .galleryWrapper.active .container .imgs img {
             width: 100%; }
+            body .products .galleryWrapper.active .container .imgs img:hover {
+              cursor: pointer; }
       body .products .galleryWrapper.active .productDesc {
         max-width: 500px;
         height: 300px;
         overflow: scroll;
-        display: flex;
         align-items: center; }
         body .products .galleryWrapper.active .productDesc div {
           color: white; }
@@ -186,7 +192,6 @@ body {
         font-size: 14px;
         height: 29px;
         padding: 5px;
-        /* If you add too much padding here, the options won't show in IE */
         width: 268px; }
   body .ourAdvantages {
     background-color: orangered;
@@ -206,7 +211,8 @@ body {
         body .ourAdvantages .advantageBoxContainer .advantageBox .advantageExample {
           display: block;
           font-size: 1.4rem;
-          margin-bottom: 20px; }
+          margin-bottom: 20px;
+          font-weight: bold; }
       body .ourAdvantages .advantageBoxContainer img {
         width: 80px;
         height: 80px;
@@ -296,6 +302,11 @@ body {
       width: 120px;
       height: 50px; }
 
+@media only screen and (min-width: 1000px) {
+  .contactForm .formIntro p {
+    width: 70%;
+    margin: 0 auto;
+    padding-top: 20px; } }
 @media only screen and (max-width: 1000px) {
   body .contactForm form {
     margin: 0; }
@@ -333,6 +344,11 @@ body {
         margin: 0; }
     body .products .styled-select {
       margin-bottom: 5%; } }
+@media only screen and (max-width: 768px) and (orientation: landscape) {
+  body header .titleContainer div h1 {
+    font-size: 3.1rem; }
+  body header .titleContainer div p {
+    font-size: 2rem; } }
 @media only screen and (max-width: 768px) and (min-width: 421) and (orientation: landscape) {
   body header .titleContainer div {
     padding-top: 10%; }
@@ -350,6 +366,6 @@ body {
   body .aboutUs h3 {
     padding-top: 28%; }
   body .contactForm .formIntro::after {
-    top: 160px; } }
+    top: 200px; } }
 
 /*# sourceMappingURL=style.css.map */
