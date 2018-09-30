@@ -1,13 +1,9 @@
 @font-face {
   font-family: 'Avenir Roman';
-<<<<<<< HEAD
   src: url("/fonts/avenir-roman.ttf"); }
 @font-face {
   font-family: 'Montserrat-Regular';
-  src: '/fonts/Montserrat-Regular.ttf'; }
-=======
-  src: url("/newRegosteel/fonts/avenir-roman.ttf"); }
->>>>>>> 9b73abe107e8b1ce52b52b625311fe0de270130c
+  src: url("/fonts/Montserrat-Regular.ttf"); }
 body {
   margin: 0;
   font-family: 'Montserrat-Regular', sans-serif;
@@ -87,7 +83,7 @@ body {
   body header {
     display: flex;
     align-items: center;
-    background-image: url("/newRegosteel/img/header-background.jpg");
+    background-image: url("/img/header-background.jpg");
     height: 90vh;
     position: relative;
     justify-content: center;
@@ -141,7 +137,7 @@ body {
       text-align: justify; }
   body .products {
     background-color: red;
-    background-image: url("/newRegosteel/img/galleryBackground.jpg");
+    background-image: url("/img/galleryBackground.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: left;
@@ -270,7 +266,7 @@ body {
     background-color: #181616;
     text-align: center;
     padding: 7%;
-    background-image: url("/newRegosteel/img/footer-background.png");
+    background-image: url("/img/footer-background.png");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center; }
@@ -347,7 +343,10 @@ body {
       body .products .galleryWrapper.active .container {
         margin: 0; }
     body .products .styled-select {
-      margin-bottom: 5%; } }
+      margin-bottom: 5%; }
+  body .ourAdvantages .advantageBox figure {
+    width: 235px;
+    margin: 20px auto; } }
 @media only screen and (max-width: 768px) and (orientation: landscape) {
   body header .titleContainer div h1 {
     font-size: 3.1rem; }

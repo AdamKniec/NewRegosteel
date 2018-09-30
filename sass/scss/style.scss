@@ -3,12 +3,11 @@
     src:url('/fonts/avenir-roman.ttf');
 }
 @font-face {
-    font-family: 'Montserrat-Regular';
-    src: '/fonts/Montserrat-Regular.ttf';
+font-family: 'Montserrat-Regular';
+    src:url('/fonts/Montserrat-Regular.ttf')
 }
 body {
     margin: 0;
-    // font-family: 'Avenir Roman';
     font-family: 'Montserrat-Regular', sans-serif;
     font-weight: lighter;
     nav {
@@ -457,6 +456,14 @@ body {
                 .styled-select {
                     margin-bottom: 5%;
                 }
+        }
+        .ourAdvantages {
+            .advantageBox {
+                figure {
+                   width: 235px; 
+                   margin: 20px auto;
+                }
+            }
         }
     }
 }
