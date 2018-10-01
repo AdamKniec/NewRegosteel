@@ -103,7 +103,7 @@ body {
           margin: 0; }
         body header .titleContainer div h1 {
           font-size: 5.1rem;
-          font-family: "avenir-roman"; }
+          font-family: 'Avenir Roman'; }
         body header .titleContainer div p {
           font-size: 3rem; }
           body header .titleContainer div p .partnerName {
@@ -149,7 +149,8 @@ body {
       padding: 5%;
       font-size: 1.6rem; }
     body .products .galleryWrapper {
-      display: none; }
+      display: none;
+      align-items: center; }
     body .products .galleryWrapper.active {
       display: flex;
       justify-content: center;
@@ -159,13 +160,16 @@ body {
         max-width: 500px; }
         body .products .galleryWrapper.active .container .main-img img {
           width: 100%;
-          box-sizing: border-box; }
+          box-sizing: border-box;
+          max-height: 332px; }
         body .products .galleryWrapper.active .container .imgs {
           display: grid;
           grid-template-columns: repeat(4, 1fr);
           grid-gap: 5px; }
           body .products .galleryWrapper.active .container .imgs img {
-            width: 100%; }
+            width: 100%;
+            height: auto;
+            max-height: 81px; }
             body .products .galleryWrapper.active .container .imgs img:hover {
               cursor: pointer; }
       body .products .galleryWrapper.active .productDesc {
@@ -212,7 +216,8 @@ body {
           display: block;
           font-size: 1.4rem;
           margin-bottom: 20px;
-          font-weight: bold; }
+          font-weight: bold;
+          font-family: "Avenir Roman"; }
       body .ourAdvantages .advantageBoxContainer img {
         width: 80px;
         height: 80px;
@@ -297,7 +302,8 @@ body {
     body footer .ownerInfo, body footer .companyDetails, body footer .contactDetails {
       padding-bottom: 1.5%; }
       body footer .ownerInfo p, body footer .companyDetails p, body footer .contactDetails p {
-        margin: 10px; }
+        margin: 10px;
+        font-family: "Avenir Roman"; }
     body footer img {
       width: 120px;
       height: 50px; }
