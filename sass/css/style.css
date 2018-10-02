@@ -159,6 +159,7 @@ body {
         margin-right: 5%;
         max-width: 500px; }
         body .products .galleryWrapper.active .container .main-img img {
+          border: 5px solid tomato;
           width: 100%;
           box-sizing: border-box;
           max-height: 332px; }
@@ -179,9 +180,8 @@ body {
         align-items: center; }
         body .products .galleryWrapper.active .productDesc div {
           color: white; }
-          body .products .galleryWrapper.active .productDesc div ul {
-            list-style-type: none;
-            padding: 5px; }
+          body .products .galleryWrapper.active .productDesc div p a {
+            color: white; }
     body .products .styled-select {
       background: url(http://i62.tinypic.com/15xvbd5.png) no-repeat 96% 0;
       height: 29px;
@@ -340,6 +340,8 @@ body {
     width: 90%;
     text-align: justify;
     font-size: 1rem; }
+    body .aboutUs .companyDescription p {
+      color: #3b3a3a; }
   body .products {
     display: flex;
     align-items: center;

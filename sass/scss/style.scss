@@ -193,6 +193,7 @@ body {
                         max-width: 500px;
                             .main-img {
                                 img {
+                                    border: 5px solid tomato;
                                     width:100%;
                                     box-sizing: border-box;
                                     max-height: 332px;
@@ -219,10 +220,17 @@ body {
                             align-items: center;
                                 div {
                                     color: white;
-                                    ul {
-                                        list-style-type: none;
-                                        padding: 5px;
-                                        
+                                    // ul {
+                                    //     // list-style-type: none;
+                                    //     padding: 5px;
+                                    //         li {
+                                    //             padding: 5px;
+                                    //         }
+                                    // }
+                                    p {
+                                        a {
+                                            color: white;
+                                        }
                                     }
                                 }
                         }
@@ -447,6 +455,9 @@ body {
                 width: 90%;
                 text-align: justify;
                 font-size: 1rem;
+                    p {
+                        color: #3b3a3a;
+                    }
             }    
         }
         .products {
