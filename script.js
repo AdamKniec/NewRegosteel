@@ -39,10 +39,10 @@
 (function(){
     let select = document.querySelector('.select');
     select.addEventListener('change', function(a) {
-        let index = select.selectedIndex;
+        let valueSelected = select.selectedIndex;
         let galleries = document.querySelectorAll('.galleryWrapper');
             galleries.forEach((a,i) => {
-                if(i == index) {
+                if(i == valueSelected) {
                     a.className = "galleryWrapper active";
                 } else {
                     a.className = "galleryWrapper";
