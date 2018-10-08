@@ -182,21 +182,16 @@ body {
           color: white; }
           body .products .galleryWrapper.active .productDesc div p a {
             color: white; }
-    body .products .styled-select {
-      background: url(http://i62.tinypic.com/15xvbd5.png) no-repeat 96% 0;
-      height: 29px;
-      background-color: tomato;
-      overflow: hidden;
-      width: 240px;
-      margin: 0 auto;
-      margin-top: 5%; }
-      body .products .styled-select select {
-        background: transparent;
-        border: none;
-        font-size: 14px;
-        height: 29px;
-        padding: 5px;
-        width: 268px; }
+    body .products .gallerySwitcher {
+      color: white;
+      display: flex;
+      justify-content: center; }
+      body .products .gallerySwitcher ul {
+        list-style-type: none;
+        display: flex;
+        flex-wrap: wrap; }
+        body .products .gallerySwitcher ul li {
+          margin: 20px; }
   body .ourAdvantages {
     background-color: orangered;
     text-align: center;
