@@ -36,21 +36,34 @@
     })
 }());
 //gallerySwitcher
-(function(){
-    let select = document.querySelector('.select');
-    select.addEventListener('change', function(a) {
-        let valueSelected = select.selectedIndex;
-        let galleries = document.querySelectorAll('.galleryWrapper');
-            galleries.forEach((a,i) => {
-                if(i == valueSelected) {
-                    a.className = "galleryWrapper active";
-                } else {
-                    a.className = "galleryWrapper";
-                }
-            })
-    })
-}());
+// (function(){
+//     let select = document.querySelector('.select');
+//     select.addEventListener('change', function(a) {
+//         let valueSelected = select.selectedIndex;
+//         let galleries = document.querySelectorAll('.galleryWrapper');
+//             galleries.forEach((a,i) => {
+//                 if(i == valueSelected) {
+//                     a.className = "galleryWrapper active";
+//                 } else {
+//                     a.className = "galleryWrapper";
+//                 }
+//             })
+//     })
+// }());
 
+//gallerySwitcher v2
+
+(function(){
+    let paragraphs = document.querySelectorAll('.gallerySwitcher ul li');
+    let galleryWrapper = document.querySelectorAll('.galleryWrapper');
+    paragraphs.forEach((singlePara,i) => {
+        singlePara.addEventListener('click', ()=> {
+            galleryWrapper.forEach(singleBox => singleBox.classList.remove('active'));
+            galleryWrapper[i].classList.add('active');
+        })
+        
+    })
+})();
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
