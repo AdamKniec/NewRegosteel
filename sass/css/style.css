@@ -1,6 +1,6 @@
 @font-face {
   font-family: 'Avenir Roman';
-  src: url("/newRegosteel/fonts/avenir-roman.ttf"); }
+  src: url("/fonts/avenir-roman.ttf"); }
 @font-face {
   font-family: 'Montserrat-Regular';
   src: url("/fonts/Montserrat-Regular.ttf"); }
@@ -83,7 +83,7 @@ body {
   body header {
     display: flex;
     align-items: center;
-    background-image: url("/newRegosteel/img/header-background.jpg");
+    background-image: url("/img/header-background.jpg");
     height: 90vh;
     position: relative;
     justify-content: center;
@@ -137,7 +137,7 @@ body {
       text-align: justify; }
   body .products {
     background-color: red;
-    background-image: url("/newRegosteel/img/galleryBackground.jpg");
+    background-image: url("/img/galleryBackground.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: left;
@@ -182,6 +182,22 @@ body {
           color: white; }
           body .products .galleryWrapper.active .productDesc div p a {
             color: white; }
+    body .products .styled-select {
+      background: url(http://i62.tinypic.com/15xvbd5.png) no-repeat 96% 0;
+      height: 29px;
+      background-color: orangered;
+      overflow: hidden;
+      width: 240px;
+      margin: 0 auto;
+      margin-top: 5%;
+      display: none; }
+      body .products .styled-select select {
+        background: transparent;
+        border: none;
+        font-size: 14px;
+        height: 29px;
+        padding: 5px;
+        width: 268px; }
     body .products .gallerySwitcher {
       color: white;
       display: flex;
@@ -191,7 +207,11 @@ body {
         display: flex;
         flex-wrap: wrap; }
         body .products .gallerySwitcher ul li {
-          margin: 20px; }
+          margin: 20px;
+          box-sizing: border-box;
+          border-bottom: 2px solid transparent; }
+          body .products .gallerySwitcher ul li:hover {
+            border-bottom: 2px solid orangered; }
   body .ourAdvantages {
     background-color: orangered;
     text-align: center;
@@ -266,7 +286,7 @@ body {
     background-color: #181616;
     text-align: center;
     padding: 7%;
-    background-image: url("/newRegosteel/img/footer-background.png");
+    background-image: url("/img/footer-background.png");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center; }
@@ -336,7 +356,7 @@ body {
           width: 250px; }
       body .contactForm form .row input[type=submit] {
         margin: 0%; } }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 778px) {
   body .navbar .hamburger {
     display: block; }
   body .navbar ul {
@@ -357,17 +377,20 @@ body {
       flex-direction: column; }
       body .products .galleryWrapper.active .container {
         margin: 0; }
+    body .products .gallerySwitcher {
+      display: none; }
     body .products .styled-select {
-      margin-bottom: 5%; }
+      margin-bottom: 5%;
+      display: block; }
   body .ourAdvantages .advantageBox figure {
     width: 235px;
     margin: 20px auto; } }
-@media only screen and (max-width: 768px) and (orientation: landscape) {
+@media only screen and (max-width: 778px) and (orientation: landscape) {
   body header .titleContainer div h1 {
     font-size: 3.1rem; }
   body header .titleContainer div p {
     font-size: 2rem; } }
-@media only screen and (max-width: 768px) and (min-width: 421) and (orientation: landscape) {
+@media only screen and (max-width: 778px) and (min-width: 421) and (orientation: landscape) {
   body header .titleContainer div {
     padding-top: 10%; }
     body header .titleContainer div h1 {
