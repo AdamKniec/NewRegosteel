@@ -211,8 +211,12 @@ body {
           box-sizing: border-box;
           border-bottom: 2px solid transparent; }
           body .products .gallerySwitcher ul li:hover {
+            padding-bottom: 2px;
             border-bottom: 2px solid orangered;
             cursor: pointer; }
+        body .products .gallerySwitcher ul .currentlyActive {
+          padding-bottom: 2px;
+          border-bottom: 2px solid orangered; }
   body .ourAdvantages {
     background-color: orangered;
     text-align: center;

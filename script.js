@@ -54,16 +54,17 @@
 //gallerySwitcher desktop
 
 (function(){
-    let paragraphs = document.querySelectorAll('.gallerySwitcher ul li');
+    let galleryCategories = document.querySelectorAll('.gallerySwitcher ul li');
     let galleryWrapper = document.querySelectorAll('.galleryWrapper');
-    paragraphs.forEach((singlePara,i) => {
-        singlePara.addEventListener('click', ()=> {
+    galleryCategories.forEach((singleCategory,i) => {
+        singleCategory.addEventListener('click', ()=> {
             galleryWrapper.forEach(singleBox => singleBox.classList.remove('active'));
             galleryWrapper[i].classList.add('active');
         })
         
     })
 })();
+//smoothScroll
 (function() {
    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
@@ -73,4 +74,13 @@
             });
         });
 }   ); 
+}())
+//gallery category selector underline
+(function() {
+    let galleryCategories = document.querySelectorAll('.gallerySwitcher ul li');
+        galleryCategories.forEach((singleCategory) => {singleCategory.addEventListener('click', ()=>{
+            galleryCategories.forEach((activatedCategory) => 
+            activatedCategory.classList.remove("currentlyActive"));
+            singleCategory.classList.add("currentlyActive");
+        })})
 }())
