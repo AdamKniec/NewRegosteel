@@ -101,9 +101,9 @@ body {
         body header .titleContainer div h1, body header .titleContainer div p {
           padding: 0;
           margin: 0; }
-        body header .titleContainer div h1 {
-          font-size: 5.3rem;
-          font-family: 'Avenir Roman'; }
+        body header .titleContainer div img {
+          width: auto;
+          height: 100px; }
         body header .titleContainer div p {
           font-size: 3rem; }
           body header .titleContainer div p .partnerName {
@@ -146,7 +146,7 @@ body {
       color: white;
       margin: 0;
       text-align: center;
-      padding: 5%;
+      padding-top: 7%;
       font-size: 1.6rem; }
     body .products .galleryWrapper {
       display: none; }
@@ -309,7 +309,8 @@ body {
         right: 49.5%; }
     body footer .name {
       font-size: 1.6rem;
-      font-weight: bolder; }
+      font-weight: bolder;
+      font-family: Avenir-Roman; }
     body footer .contactDetails div {
       display: flex;
       justify-content: center;
@@ -369,6 +370,10 @@ body {
     display: none; }
   body .navbar .mobile {
     display: block; }
+  body header .titleContainer div h1 img {
+    height: 65px; }
+  body header .titleContainer div p {
+    font-size: 1.6rem; }
   body .aboutUs .companyDescription {
     width: 90%;
     text-align: justify;
@@ -392,24 +397,22 @@ body {
     width: 235px;
     margin: 20px auto; } }
 @media only screen and (max-width: 778px) and (orientation: landscape) {
-  body header .titleContainer div h1 {
-    font-size: 3.1rem; }
+  body header .titleContainer div h1 img {
+    height: 45px; }
   body header .titleContainer div p {
-    font-size: 2rem; } }
+    font-size: 1.5rem; } }
 @media only screen and (max-width: 778px) and (min-width: 421) and (orientation: landscape) {
   body header .titleContainer div {
     padding-top: 10%; }
-    body header .titleContainer div h1 {
-      font-size: 3rem; }
     body header .titleContainer div p {
       font-size: 1.5rem; } }
 @media only screen and (max-width: 420px) {
   body header {
     height: 70vh; }
-    body header .titleContainer div h1 {
-      font-size: 3rem; }
+    body header .titleContainer div h1 img {
+      height: 55px; }
     body header .titleContainer div p {
-      font-size: 1.5rem; }
+      font-size: 1.4rem; }
   body .aboutUs h3 {
     padding-top: 28%; }
   body .contactForm .formIntro::after {

@@ -121,9 +121,13 @@ body {
                                     padding: 0;
                                     margin: 0;
                                 }
-                                h1 {
-                                    font-size: 5.3rem;
-                                    font-family: 'Avenir Roman';
+                                // h1 {
+                                //     font-size: 5.3rem;
+                                //     font-family: 'Avenir Roman';
+                                // }
+                                img {
+                                    width: auto;
+                                    height: 100px;
                                 }
                                 p {
                                     font-size: 3rem;
@@ -177,7 +181,7 @@ body {
                     color: white;
                     margin:0;
                     text-align: center;
-                    padding: 5%;
+                    padding-top: 7%;
                     font-size: 1.6rem;
                 }
                 .galleryWrapper{
@@ -398,6 +402,7 @@ body {
                     .name {
                         font-size: 1.6rem;
                         font-weight: bolder;
+                        font-family: Avenir-Roman;
                     }
                 .contactDetails {
                     div {
@@ -492,6 +497,22 @@ body {
                 display: block;
             }
         }
+        header {
+            .titleContainer {
+                div {
+                    h1 {
+                        img {
+                            height: 65px;
+                        }
+                        
+                    }
+                    p {
+                        font-size: 1.6rem;
+                    }
+                }
+            }
+        }
+        
         .aboutUs {
             .companyDescription {
                 width: 90%;
@@ -536,10 +557,12 @@ body {
             .titleContainer {
                 div {
                     h1 {
-                        font-size: 3.1rem;
+                        img {
+                            height: 45px;
+                        }
                     }
                     p {
-                        font-size: 2rem;
+                        font-size: 1.5rem;
                     } 
                 }
             }   
@@ -554,9 +577,9 @@ body {
        .titleContainer {
         div {
             padding-top: 10%;
-            h1 {
-            font-size: 3rem;
-            }
+            // h1 {
+            // font-size: 3rem;
+            // }
             p {
                 font-size: 1.5rem;
             }  
@@ -571,11 +594,17 @@ body {
             height: 70vh;
                 .titleContainer {
                     div {
+                        // h1 {
+                        //     font-size: 3rem;
+                        // }
                         h1 {
-                            font-size: 3rem;
+                            img {
+                                height: 55px;
+                            }    
                         }
+                        
                         p {
-                            font-size: 1.5rem;
+                            font-size: 1.4rem;
                         }  
                     }   
                 }
