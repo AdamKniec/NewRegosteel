@@ -1,6 +1,6 @@
 @font-face {
   font-family: 'Avenir Roman';
-  src: url("/newRegosteel/fonts/avenir-roman.ttf"); }
+  src: url("/fonts/avenir-roman.ttf"); }
 @font-face {
   font-family: 'Montserrat-Regular';
   src: url("/fonts/Montserrat-Regular.ttf"); }
@@ -83,7 +83,7 @@ body {
   body header {
     display: flex;
     align-items: center;
-    background-image: url("/newRegosteel/img/header-background.jpg");
+    background-image: url("/img/header-background.jpg");
     height: 90vh;
     position: relative;
     justify-content: center;
@@ -137,7 +137,7 @@ body {
       text-align: justify; }
   body .products {
     background-color: red;
-    background-image: url("/newRegosteel/img/galleryBackground.jpg");
+    background-image: url("/img/galleryBackground.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: left;
@@ -175,13 +175,14 @@ body {
       body .products .galleryWrapper.active .productDesc {
         max-width: 500px;
         height: 300px;
-        overflow-y: scroll;
+        overflow-y: auto;
         overflow-x: hidden;
         align-items: center; }
         body .products .galleryWrapper.active .productDesc div {
           color: white; }
           body .products .galleryWrapper.active .productDesc div p a {
-            color: white; }
+            color: white;
+            width: 50px; }
     body .products .styled-select {
       background: url(http://i62.tinypic.com/15xvbd5.png) no-repeat 96% 0;
       height: 29px;
@@ -291,7 +292,7 @@ body {
     background-color: #181616;
     text-align: center;
     padding: 7%;
-    background-image: url("/newRegosteel/img/footer-background.png");
+    background-image: url("/img/footer-background.png");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center; }
@@ -323,7 +324,7 @@ body {
       padding-bottom: 1.5%; }
       body footer .ownerInfo p, body footer .companyDetails p, body footer .contactDetails p {
         margin: 10px;
-        font-family: "Avenir Roman"; }
+        font-family: Sans-Serif; }
     body footer img {
       width: 120px;
       height: 50px; }
