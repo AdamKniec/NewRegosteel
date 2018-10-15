@@ -74,7 +74,7 @@
             });
         });
 }   ); 
-}())
+}());
 //gallery category selector underline
 (function() {
     let galleryCategories = document.querySelectorAll('.gallerySwitcher ul li');
@@ -83,4 +83,4 @@
             activatedCategory.classList.remove("currentlyActive"));
             singleCategory.classList.add("currentlyActive");
         })})
-}())
+}());
