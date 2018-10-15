@@ -80,6 +80,9 @@ body {
     body .sticky ul li {
       padding: 30px;
       transition: padding 0.2s; }
+  body .boldItalic {
+    font-weight: bold;
+    font-style: italic; }
   body header {
     display: flex;
     align-items: center;

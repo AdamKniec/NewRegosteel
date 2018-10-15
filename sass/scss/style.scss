@@ -99,6 +99,11 @@ body {
                 transition: padding 0.2s;
             }
     }
+    //helper class below (bold and italic styles)
+    .boldItalic {
+        font-weight: bold;
+        font-style: italic;
+    }
         header {
             display: flex;
             align-items: center;
