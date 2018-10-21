@@ -130,6 +130,7 @@ function cos() {
     var images = document.querySelectorAll('.imgs');
     console.log(currentImage);
     console.log(images);
+    var i;
     for(i=0; i< images.length; i++){
         images[i].addEventListener('click', function(e) {
             var boxNumber = this.className.slice(-1) - 1;
