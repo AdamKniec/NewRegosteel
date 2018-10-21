@@ -160,38 +160,19 @@ galleryHandler();
 
 //gallerySwitcher desktop
 
-// (function () {
-//     var galleryCategories = document.querySelectorAll('.gallerySwitcher ul li');
-//     var galleryWrapper = document.querySelectorAll('.galleryWrapper');
-//     galleryCategories.forEach(function (singleCategory, i) {
-//         singleCategory.addEventListener('click', function () {
-//             galleryWrapper.forEach(function (singleBox) {
-//                 return singleBox.classList.remove('active');
-//             });
-//             galleryWrapper[i].classList.add('active');
-//         });
-//     });
-// })();
-function gallerySwitcherDesktop(){
+(function () {
     var galleryCategories = document.querySelectorAll('.gallerySwitcher ul li');
     var galleryWrapper = document.querySelectorAll('.galleryWrapper');
-    var i;
-    for(i=0; i<galleryCategories.length; i++) {
-        function changeGallery (singleCategory,i) {
-            singleCategory.addEventListener('click', function () {
-                var k;
-                for(k=0; k<galleryWrapper.length; k++) {
-                    function addClass(singleBox) {
-                        return singleBox.classList.remove('active');
-                    }
-                }
-                galleryWrapper[i].classList.add('active');
-            })
-        }
-        changeGallery();
-    }
-}
-gallerySwitcherDesktop();
+    galleryCategories.forEach(function (singleCategory, i) {
+        singleCategory.addEventListener('click', function () {
+            galleryWrapper.forEach(function (singleBox) {
+                return singleBox.classList.remove('active');
+            });
+            galleryWrapper[i].classList.add('active');
+        });
+    });
+})();
+
 //smoothScroll
 (function () {
     document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
