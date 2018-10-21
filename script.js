@@ -140,7 +140,8 @@ function galleryHandler() {
         })
     }
 };
-galleryHandler()
+galleryHandler();
+
 //gallerySwitcher mobile
 (function () {
     var select = document.querySelector('.select');
@@ -171,7 +172,24 @@ galleryHandler()
 //         });
 //     });
 // })();
-
+function gallerySwitcherDesktop(){
+    var galleryCategories = document.querySelectorAll('.gallerySwitcher ul li');
+    var galleryWrapper = document.querySelectorAll('.galleryWrapper');
+    var i;
+    for(i=0; i<galleryCategories.length; i++) {
+        function changeGallery (singleCategory,i) {
+            singleCategory.addEventListener('click', function () {
+                var k;
+                for(k=0; k<galleryWrapper.length; k++) {
+                    function addClass(singleBox) {
+                        return singleBox.classList.remove('active');
+                    }
+                }
+                galleryWrapper[i].classList.add('active');
+            })
+        }
+    }
+}
 //smoothScroll
 (function () {
     document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
