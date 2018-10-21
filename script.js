@@ -188,6 +188,7 @@ function gallerySwitcherDesktop(){
                 galleryWrapper[i].classList.add('active');
             })
         }
+        changeGallery();
     }
 }
 gallerySwitcherDesktop();
