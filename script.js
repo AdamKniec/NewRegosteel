@@ -125,7 +125,7 @@
 //         });
 //     });
 // })();
-(function() {
+function galleryHandler() {
     var currentImage = document.querySelectorAll('.main-img img');
     var images = document.querySelectorAll('.imgs');
     console.log(currentImage);
@@ -139,7 +139,8 @@
             }
         })
     }
-})();
+};
+
 //gallerySwitcher mobile
 (function () {
     var select = document.querySelector('.select');
@@ -173,7 +174,7 @@
 
 (function () {
     var galleryCategories = document.querySelectorAll('.gallerySwitcher ul li');
-    var gallery Wrapper
+    var galleryWrapper;
 })()
 //smoothScroll
 (function () {
