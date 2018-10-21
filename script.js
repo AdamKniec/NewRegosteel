@@ -190,6 +190,7 @@ function gallerySwitcherDesktop(){
         }
     }
 }
+gallerySwitcherDesktop();
 //smoothScroll
 (function () {
     document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
