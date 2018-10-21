@@ -140,7 +140,7 @@ function galleryHandler() {
         })
     }
 };
-
+galleryHandler()
 //gallerySwitcher mobile
 (function () {
     var select = document.querySelector('.select');
@@ -172,10 +172,6 @@ function galleryHandler() {
 //     });
 // })();
 
-(function () {
-    var galleryCategories = document.querySelectorAll('.gallerySwitcher ul li');
-    var galleryWrapper;
-})()
 //smoothScroll
 (function () {
     document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
