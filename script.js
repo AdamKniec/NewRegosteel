@@ -116,7 +116,7 @@
 (function () {
     var currentImage = document.querySelectorAll(".main-img img");
     var images = document.querySelectorAll('.imgs');
-    images.forEach(function (element) {
+    [...images].forEach(function (element) {
         element.addEventListener('click', function (e) {
             var boxNumber = this.className.slice(-1) - 1;
             if (e.target.nodeName === "IMG") {
