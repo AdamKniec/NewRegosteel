@@ -186,7 +186,7 @@
 // })();
 (function(){
     var galleryCategories = document.querySelectorAll('.gallerySwitcher ul li');
-    var galleryWrapper = document.querySelectorAll('galleryWrapper');
+    var galleryWrapper = document.querySelectorAll('.galleryWrapper');
         galleryCategories = [].slice.call(galleryCategories);
         galleryCategories.forEach(function(singleCategory,i) {
             singleCategory.addEventListener('click', function (){
