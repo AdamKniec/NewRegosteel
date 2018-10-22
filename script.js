@@ -125,22 +125,34 @@
 //         });
 //     });
 // })();
-function galleryHandler() {
+//GalleryHandler
+(function () {
     var currentImage = document.querySelectorAll('.main-img img');
     var images = document.querySelectorAll('.imgs');
-    console.log(currentImage);
-    console.log(images);
-    var i;
-    for(i=0; i< images.length; i++){
-        images[i].addEventListener('click', function(e) {
-            var boxNumber = this.className.slice(-1) - 1;
-            if(e.target.nodeName === "IMG") {
-                currentImage[boxNumber].src = e.target.src;
-            }
-        })
-    }
-};
-galleryHandler();
+        images = [].slice.call(images);
+        images.forEach(function(element) {
+            element.addEventListener('click', function(e) {
+                var boxNumber = this.className.slice(-1)-1;
+                if(e.target.nodeName === "IMG") {
+                    currentImage[boxNumber.src = e.target.src];
+                };
+            });
+        });
+})();
+// function galleryHandler() {
+//     var currentImage = document.querySelectorAll('.main-img img');
+//     var images = document.querySelectorAll('.imgs');
+//     var i;
+//     for(i=0; i< images.length; i++){
+//         images[i].addEventListener('click', function(e) {
+//             var boxNumber = this.className.slice(-1) - 1;
+//             if(e.target.nodeName === "IMG") {
+//                 currentImage[boxNumber].src = e.target.src;
+//             }
+//         })
+//     }
+// };
+// galleryHandler();
 
 //gallerySwitcher mobile
 (function () {
