@@ -134,7 +134,7 @@
             element.addEventListener('click', function(e) {
                 var boxNumber = this.className.slice(-1)-1;
                 if(e.target.nodeName === "IMG") {
-                    currentImage[boxNumber.src = e.target.src];
+                    currentImage[boxNumber].src = e.target.src;
                 };
             });
         });
