@@ -210,14 +210,24 @@
     });
 })();
 //gallery category selector underline
-(function () {
+// (function () {
+//     var galleryCategories = document.querySelectorAll('.gallerySwitcher ul li');
+//     galleryCategories.forEach(function (singleCategory) {
+//         singleCategory.addEventListener('click', function () {
+//             galleryCategories.forEach(function (activatedCategory) {
+//                 return activatedCategory.classList.remove("currentlyActive");
+//             });
+//             singleCategory.classList.add("currentlyActive");
+//         });
+//     });
+// })();
+(function(){
     var galleryCategories = document.querySelectorAll('.gallerySwitcher ul li');
-    galleryCategories.forEach(function (singleCategory) {
-        singleCategory.addEventListener('click', function () {
-            galleryCategories.forEach(function (activatedCategory) {
-                return activatedCategory.classList.remove("currentlyActive");
-            });
-            singleCategory.classList.add("currentlyActive");
-        });
-    });
+        galleryCategories = [].slice.call(galleryCategories);
+        galleryCategories.forEach(function(singleCategory) {
+            singleCategory.addEventListener('click', function(activatedCategory) {
+                return activatedCategory.classList.remove('currentlyActive');
+            })
+            singleCategory.classList.add('currentlyActive');
+        })
 })();
