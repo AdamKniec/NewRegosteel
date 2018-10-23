@@ -225,9 +225,11 @@
     var galleryCategories = document.querySelectorAll('.gallerySwitcher ul li');
         galleryCategories = [].slice.call(galleryCategories);
         galleryCategories.forEach(function(singleCategory) {
-            singleCategory.addEventListener('click', function(activatedCategory) {
-                return activatedCategory.classList.remove('currentlyActive');
+            singleCategory.addEventListener('click', function(){
+                galleryCategories.forEach(function(activatedCategory){
+                    return activatedCategory.classList.remove('currentlyActive');
+                })
+                singleCategory.classList.add('currentlyActive');
             })
-            singleCategory.classList.add('currentlyActive');
         })
 })();
