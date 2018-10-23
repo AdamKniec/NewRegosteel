@@ -235,14 +235,15 @@
 // })();
 (function(){
     var galleryCategories = document.querySelectorAll('.gallerySwitcher ul li');
+        galleryCategories = [].slice.call(galleryCategories);
     var i = 0;
     var k;
     for(i=0; i < galleryCategories.length; i++){
-      galleryCategories[i].addEventListener('click', function(e){
+      galleryCategories[i].addEventListener('click', function(){
         for(k=0; k < galleryCategories.length; k++){
-          galleryCategories[k].className -= 'currentlyActive';
+          galleryCategories[k].classList.remove('currentlyActive');
         }
-        this.className += " currentlyActive";
+        this.classList.add('currentlyActive');
       })
     }
  })();
