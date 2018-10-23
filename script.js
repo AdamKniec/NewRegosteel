@@ -227,7 +227,7 @@
         galleryCategories.forEach(function(singleCategory) {
             singleCategory.addEventListener('click', function(){
                 galleryCategories.forEach(function(activatedCategory){
-                    return activatedCategory.classList.remove('currentlyActive');
+                    activatedCategory.classList.remove('currentlyActive');
                 })
                 singleCategory.classList.add('currentlyActive');
             })
