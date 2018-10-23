@@ -227,9 +227,9 @@
         galleryCategories.forEach(function(singleCategory) {
             singleCategory.addEventListener('click', function(){
                 galleryCategories.forEach(function(activatedCategory){
-                    activatedCategory.classList.remove('currentlyActive');
+                    activatedCategory.classList.remove("currentlyActive");
                 })
-                singleCategory.classList.add('currentlyActive');
+                singleCategory.classList.add("currentlyActive");
             })
         })
 })();
