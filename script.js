@@ -240,9 +240,9 @@
     for(i=0; i < galleryCategories.length; i++){
       galleryCategories[i].addEventListener('click', function(e){
         for(k=0; k < galleryCategories.length; k++){
-          galleryCategories[k].classList.remove('currentlyActive');
+          galleryCategories[k].className -= 'currentlyActive';
         }
-        this.classList.add('currentlyActive');
+        this.className += " currentlyActive";
       })
     }
  })();
