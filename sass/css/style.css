@@ -166,6 +166,8 @@ body {
           box-sizing: border-box;
           max-height: 332px; }
         body .products .galleryWrapper.active .container .imgs {
+          display: -ms-grid;
+          -ms-grid-column: 1fr [4];
           display: grid;
           grid-template-columns: repeat(4, 1fr);
           grid-gap: 5px; }
