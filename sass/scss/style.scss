@@ -105,28 +105,15 @@ body {
         font-style: italic;
     }
         header {
-            // display: flex;
-            // align-items: center;
-            // background-image: url("/img/header-background.jpg");
-            // height: 90vh;
-            // position: relative;
-            // justify-content: center;
-            // background-size: cover;
-            // background-position: center;
-            display: -webkit-box;
-            display: -ms-flexbox;
             display: flex;
-            -webkit-box-align: center;
-            -ms-flex-align: center;
             align-items: center;
             background-image: url("/img/header-background.jpg");
             height: 90vh;
             position: relative;
-            -webkit-box-pack: center;
-            -ms-flex-pack: center;
             justify-content: center;
             background-size: cover;
             background-position: center;
+            flex-direction: column;
                 .titleContainer {
                     display: flex;
                     justify-content: center;
