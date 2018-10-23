@@ -105,11 +105,25 @@ body {
         font-style: italic;
     }
         header {
+            // display: flex;
+            // align-items: center;
+            // background-image: url("/img/header-background.jpg");
+            // height: 90vh;
+            // position: relative;
+            // justify-content: center;
+            // background-size: cover;
+            // background-position: center;
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
             align-items: center;
             background-image: url("/img/header-background.jpg");
             height: 90vh;
             position: relative;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
             justify-content: center;
             background-size: cover;
             background-position: center;
@@ -198,7 +212,7 @@ body {
                         max-width: 500px;
                             .main-img {
                                 img {
-                                    border: 3px solid orangered;
+                                    border: 2px solid orangered;
                                     width:100%;
                                     box-sizing: border-box;
                                     max-height: 332px;
@@ -206,13 +220,17 @@ body {
                             }
                             .imgs {
                                 display: -ms-grid;
-                                -ms-grid-columns: (1fr)[4];
+                                // -ms-grid-columns: (1fr)[4];
                                 grid-template-columns: repeat(4,1fr);
                                 display: grid;
                                 grid-gap:5px;
+                                // display: flex;
+                                // width: 100%;
+                                
                                     img {
                                         width:100%;
-                                        height: auto;
+                                        margin: 2px;
+                                        // height: auto;
                                         max-height: 81px;
                                             &:hover {
                                                 cursor: pointer;
