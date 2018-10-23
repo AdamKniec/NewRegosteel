@@ -243,7 +243,7 @@
         for(k=0; k < galleryCategories.length; k++){
           galleryCategories[k].classList.remove('currentlyActive');
         }
-        this.classList.add('currentlyActive');
+        this.classList.toggle('currentlyActive');
       })
     }
  })();

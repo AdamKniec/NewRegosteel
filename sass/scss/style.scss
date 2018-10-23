@@ -206,9 +206,9 @@ body {
                             }
                             .imgs {
                                 display: -ms-grid;
-                                -ms-grid-column: (1fr)[4];
-                                display: grid;
+                                -ms-grid-columns: (1fr)[4];
                                 grid-template-columns: repeat(4,1fr);
+                                display: grid;
                                 grid-gap:5px;
                                     img {
                                         width:100%;
