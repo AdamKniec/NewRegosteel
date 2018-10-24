@@ -210,32 +210,32 @@
 //         });
 //     });
 // })();
-// (function(){
-//     var galleryCategories = document.querySelectorAll('.gallerySwitcher ul li');
-//         galleryCategories = [].slice.call(galleryCategories);
-//         galleryCategories.forEach(function(singleCategory) {
-//             singleCategory.addEventListener('click', function(){
-//                 galleryCategories.forEach(function(activatedCategory){
-//                     activatedCategory.classList.remove("currentlyActive");
-//                 })
-//                 singleCategory.classList.add("currentlyActive");
-//             })
-//         })
-// })();
 (function(){
     var galleryCategories = document.querySelectorAll('.gallerySwitcher ul li');
         galleryCategories = [].slice.call(galleryCategories);
-    var i = 0;
-    var k;
-    for(i=0; i < galleryCategories.length; i++){
-      galleryCategories[i].addEventListener('click', function(){
-        for(k=0; k < galleryCategories.length; k++){
-          galleryCategories[k].classList.remove('currentlyActive');
-        }
-        this.classList.add('currentlyActive');
-      })
-    }
- })();
+        galleryCategories.forEach(function(singleCategory) {
+            singleCategory.addEventListener('click', function(){
+                galleryCategories.forEach(function(activatedCategory){
+                    activatedCategory.classList.remove("currentlyActive");
+                })
+                singleCategory.classList.add("currentlyActive");
+            })
+        })
+})();
+// (function(){
+//     var galleryCategories = document.querySelectorAll('.gallerySwitcher ul li');
+//         galleryCategories = [].slice.call(galleryCategories);
+//     var i = 0;
+//     var k;
+//     for(i=0; i < galleryCategories.length; i++){
+//       galleryCategories[i].addEventListener('click', function(){
+//         for(k=0; k < galleryCategories.length; k++){
+//           galleryCategories[k].classList.remove('currentlyActive');
+//         }
+//         this.classList.add('currentlyActive');
+//       })
+//     }
+//  })();
  //smoothScroll
 (function () {
     document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
