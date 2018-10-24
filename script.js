@@ -198,17 +198,6 @@
             })
         })
 })();
-//smoothScroll
-(function () {
-    document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            document.querySelector(this.getAttribute('href')).scrollIntoView({
-                behavior: 'smooth'
-            });
-        });
-    });
-})();
 //gallery category selector underline
 // (function () {
 //     var galleryCategories = document.querySelectorAll('.gallerySwitcher ul li');
@@ -247,3 +236,14 @@
       })
     }
  })();
+ //smoothScroll
+(function () {
+    document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
+})();
