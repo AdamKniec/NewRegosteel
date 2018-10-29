@@ -224,6 +224,12 @@ body {
                                             }
                                     }
                             }
+                            /*IE Gallery Fix*/
+                            @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+                                .imgs {
+                                     display: -ms-inline-flexbox;
+                                }
+                             }
                         }
                         .productDesc {
                             max-width: 500px;

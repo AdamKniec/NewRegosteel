@@ -160,7 +160,8 @@ body {
       margin: 2%; }
       body .products .galleryWrapper.active .container {
         margin-right: 5%;
-        max-width: 500px; }
+        max-width: 500px;
+        /*IE Gallery Fix*/ }
         body .products .galleryWrapper.active .container .main-img img {
           border: 2px solid orangered;
           width: 100%;
@@ -177,6 +178,9 @@ body {
             max-height: 81px; }
             body .products .galleryWrapper.active .container .imgs img:hover {
               cursor: pointer; }
+        @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+          body .products .galleryWrapper.active .container .imgs {
+            display: -ms-inline-flexbox; } }
       body .products .galleryWrapper.active .productDesc {
         max-width: 500px;
         height: 300px;
