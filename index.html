@@ -31,7 +31,7 @@
             </div>
             
     </header>
-    <section class="aboutUs"  id="aboutUs" >
+    <section class="aboutUs"  id="aboutUs">
         <h3>O nas</h3>
         <div class="companyDescription">
             <p>Firma Regosteel powstała w 2016 roku.
@@ -47,10 +47,10 @@
                 stali specjalnych i gotowych elementów stalowych.</p>
         </div>
     </section>
-    <section class="products"  >
+    <section class="products" id="products">
         <h3>Produkty</h3>
         <div class="galleryWrapper active">
-           <div class = "container" id="products">
+           <div class = "container" >
                 <div class = "main-img">
                     <img src = "img/steel-image1.jpg"  alt="stal główne zdjęcie" />
                 </div>
@@ -183,12 +183,16 @@
             </ul>
          </div>
         <div class="styled-select">
-            <select class="select">
-              <option>Stale specjalne</option>
-              <option>Processing</option>
-              <option>Druty spawalnicze</option>
-              <option>Przykładowe zastosowania</option>
-            </select>
+            <div class="select-active">
+                Stale Specjalne
+                <div class="triangle">&#9660;</div>
+            </div>
+            <ul class="select">
+                <li class="select-option">Stale specjalne</li>
+                <li class="select-option">Processing</li>
+                <li class="select-option">Druty spawalnicze</li>
+                <li class="select-option">Przykładowe zastosowania</li>
+            </ul>
         </div>
     </section>
     <section class="ourAdvantages">
@@ -233,7 +237,7 @@
             </div>
         </div>
         </section>
-    <section class="contactForm" >
+    <section class="contactForm" id="contactForm">
         <div class="formIntro" >
             <h3>Formularz Kontaktowy</h3>
             <p>Chętnie udzielimy wszelkich szczegółowych informacji dotyczących naszej oferty.
@@ -242,7 +246,7 @@
             <form action="https://formspree.io/sales@regosteel.pl" method="POST" >
               <div class="row" >
                 <div class="leftFormCol">
-                  <label for="fullName" id="contactForm">Imię i nazwisko:</label>
+                  <label for="fullName" >Imię i nazwisko:</label>
                 </div>
                 <div class="rightFormCol">
                   <input type="text" id="fullName" name="fullName" required>
@@ -291,6 +295,7 @@
         </div>
         <img src="img/reliable-company.png" alt="ikona rzetelna firma">
     </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>

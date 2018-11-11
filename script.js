@@ -89,10 +89,13 @@
 //Function responsible for class addition
 (function () {
     var nav = document.querySelector('.navbar');
-    var animeteNavbar = function animeteNavbar() {
-        return window.scrollY > 0 ? nav.classList.add('sticky') : nav.classList.remove('sticky');
-    };
-    window.addEventListener('scroll', animeteNavbar);
+    window.addEventListener('scroll',function () {
+        if(window.pageYOffset > 0){
+            nav.classList.add('sticky');
+        } else{
+            nav.classList.remove('sticky');
+        }
+    });
 })();
 
 //MobileMenu handler
@@ -139,6 +142,27 @@
             });
         });
 })();
+(function($) {
+$(document).ready(function(){
+    $("a").on('click', function(event) {
+        if (this.hash !== "") {
+            event.preventDefault();
+
+            var hash = this.hash;
+            var targetOffset = $(hash).offset().top - 80;
+            if(hash ==="#aboutUs"){
+                targetOffset += 80;
+            }
+
+            $('html, body').animate({
+                scrollTop: targetOffset
+            }, 800, function(){
+
+            });
+        }
+    });
+});
+})(jQuery);
 // function galleryHandler() {
 //     var currentImage = document.querySelectorAll('.main-img img');
 //     var images = document.querySelectorAll('.imgs');
@@ -159,15 +183,56 @@
     var select = document.querySelector('.select');
     select.addEventListener('change', function (a) {
         var valueSelected = select.selectedIndex;
+
+    });
+})();
+
+(function () {
+    var select = document.querySelector('.select-active');
+    var selectList = document.querySelector('.select');
+    //dropdown header change state and show/hide dropdown menu
+    select.addEventListener('click', function () {
+        select.querySelector('.triangle').classList.toggle('clicked');
+        if(select.querySelector('.clicked')){
+            select.querySelector('.triangle').innerHTML = "&#9650;";
+            selectList.style.display = 'block';
+        } else{
+            select.querySelector('.triangle').innerHTML = "&#9660;";
+            selectList.style.display = 'none';
+        }
+    });
+    var options = selectList.querySelectorAll('.select-option');
+    for ( var i = 0 ; i < options.length ; i++ ){
+        options[i].addEventListener('click', function () {
+            for ( var i = 0 ; i < options.length ; i++){
+                if( this === options[i]){
+                    changeGallery(i);
+                }
+            }
+        })
+    }
+    function changeGallery (index) {
         var galleries = document.querySelectorAll('.galleryWrapper');
         galleries.forEach(function (a, i) {
-            if (i == valueSelected) {
+            if (i == index) {
                 a.className = "galleryWrapper active";
             } else {
                 a.className = "galleryWrapper";
             }
-        });
-    });
+        })
+    }
+    /*var galleries = document.querySelectorAll('.galleryWrapper');
+    galleries.forEach(function (a, i) {
+        if (i == valueSelected) {
+            a.className = "galleryWrapper active";
+        } else {
+          a.className = "galleryWrapper";
+        }
+    });*/
+
+
+
+
 })();
 
 //gallerySwitcher desktop
