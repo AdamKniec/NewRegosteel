@@ -597,6 +597,11 @@ body {
                 }
             }
         }
+        .contactForm {
+            .formIntro::after {
+                top: 140px;
+            }
+        }
     }
 }
 @media only screen and (max-width: 778px) and (orientation: landscape){

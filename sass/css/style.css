@@ -440,7 +440,9 @@ body {
       display: block; }
   body .ourAdvantages .advantageBox figure {
     width: 235px;
-    margin: 20px auto; } }
+    margin: 20px auto; }
+  body .contactForm .formIntro::after {
+    top: 140px; } }
 @media only screen and (max-width: 778px) and (orientation: landscape) {
   body header .titleContainer div h1 img {
     height: 45px; }
