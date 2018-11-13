@@ -193,6 +193,7 @@ $(document).ready(function(){
     var gallerySection = document.querySelector('.products');
           gallerySection.addEventListener('click',function(e){
             var select = document.querySelector('.select-active');
+            var title = document.querySelector('.select-title');
             var selectList = document.querySelector('.select');
               if(e.target === select && !(e.target.classList.contains('clicked'))){
                     select.querySelector('.triangle').classList.toggle('clicked');
@@ -208,6 +209,7 @@ $(document).ready(function(){
 
     for ( var i = 0 ; i < options.length ; i++ ){
             options[i].addEventListener('click', function () {
+                title.innerHTML = this.innerHTML;
                 for ( var i = 0 ; i < options.length ; i++){
                     if( this === options[i]){
                         changeGallery(i);
@@ -217,13 +219,13 @@ $(document).ready(function(){
         }
     function changeGallery (index) {
                 var galleries = document.querySelectorAll('.galleryWrapper');
-                galleries.forEach(function (a, i) {
+                for ( var i = 0 ; i < galleries.length ; i++){
                     if (i == index) {
-                        a.className = "galleryWrapper active";
+                        galleries[i].className = "galleryWrapper active";
                     } else {
-                        a.className = "galleryWrapper";
+                        galleries[i].className = "galleryWrapper";
                     }
-                })
+                }
             }
           })
           
