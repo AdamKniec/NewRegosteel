@@ -69,8 +69,14 @@ body {
                                         border-bottom: 2px solid orangered;
                                     }
                             }
+                        
                     }
-                    
+                .languageSwitcher a {
+                            opacity: 0.5;
+                            &:hover  {
+                                opacity: 1;
+                            }
+                        }    
             }
             //Helper class below (mobile navigation styling)
             .mobile {
@@ -107,7 +113,7 @@ body {
         header {
             display: flex;
             align-items: center;
-            background-image: url("/newRegosteel/img/header-background.jpg");
+            background-image: url("/img/header-background.jpg");
             height: 90vh;
             position: relative;
             justify-content: center;
@@ -173,7 +179,7 @@ body {
                 }
         }
         .products {
-            background-color: red;
+            background-color: black;
             background-image: url("/newRegosteel/img/galleryBackground.jpg");
             background-size: cover;
             background-repeat: no-repeat;
