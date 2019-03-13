@@ -1,10 +1,10 @@
 @font-face {
     font-family: 'Avenir Roman';
-    src:url('/fonts/avenir-roman.ttf');
+    src:url('/newRegosteel/fonts/avenir-roman.ttf');
 }
 @font-face {
 font-family: 'Montserrat-Regular';
-    src:url('/fonts/Montserrat-Regular.ttf')
+    src:url('/newRegosteel/fonts/Montserrat-Regular.ttf')
 }
 body {
     margin: 0;
@@ -113,7 +113,7 @@ body {
         header {
             display: flex;
             align-items: center;
-            background-image: url("/img/header-background.jpg");
+            background-image: url("/newRegosteel/img/header-background.jpg");
             height: 90vh;
             position: relative;
             justify-content: center;
@@ -180,7 +180,7 @@ body {
         }
         .products {
             background-color: black;
-            background-image: url("/img/galleryBackground.jpg");
+            background-image: url("/newRegosteel/img/galleryBackground.jpg");
             background-size: cover;
             background-repeat: no-repeat;
             background-position: left;
@@ -213,17 +213,12 @@ body {
                             }
                             .imgs {
                                 display: -ms-grid;
-                                // -ms-grid-columns: (1fr)[4];
                                 grid-template-columns: repeat(4,1fr);
                                 display: grid;
                                 grid-gap:5px;
-                                // display: flex;
-                                // width: 100%;
-                                
                                     img {
                                         width:100%;
                                         margin: 2px;
-                                        // height: auto;
                                         max-height: 81px;
                                             &:hover {
                                                 cursor: pointer;
@@ -294,24 +289,6 @@ body {
                             font-size: 14px;
                         }
                     }
-                    // select {
-                    //     background: transparent;
-                    //     border: none;
-                    //     font-size: 14px;
-                    //     color: white;
-                    //     height: 40px;
-                    //     padding: 5px;
-                    //     width: 268px;
-                    //     option{
-                    //         background: white;
-                    //         color: black;
-                    //         width: 240px;
-                    //     }
-                    //     option:checked{
-                    //         background: white;
-                    //         color: black;
-                    //     }
-                    //  }
                  }
                 .gallerySwitcher {
                     color: white;
@@ -372,7 +349,6 @@ body {
                                 height: 80px;
                                 margin-bottom: 20px;
                             }
-
                 }
         }
         .contactForm {
@@ -435,7 +411,7 @@ body {
             background-color:rgb(24, 22, 22) ; //Dopisac
             text-align: center;
             padding: 7%;
-            background-image: url("/img/footer-background.png");
+            background-image: url("/newRegosteel/img/footer-background.png");
             background-size: contain;
             background-repeat: no-repeat;
             background-position: center;
@@ -652,9 +628,6 @@ body {
             height: 70vh;
                 .titleContainer {
                     div {
-                        // h1 {
-                        //     font-size: 3rem;
-                        // }
                         h1 {
                             img {
                                 height: 55px;

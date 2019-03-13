@@ -1,10 +1,10 @@
 @font-face {
   font-family: "Avenir Roman";
-  src: url("/fonts/avenir-roman.ttf");
+  src: url("/newRegosteel/fonts/avenir-roman.ttf");
 }
 @font-face {
   font-family: "Montserrat-Regular";
-  src: url("/fonts/Montserrat-Regular.ttf");
+  src: url("/newRegosteel/fonts/Montserrat-Regular.ttf");
 }
 body {
   margin: 0;
@@ -110,7 +110,7 @@ body .boldItalic {
 body header {
   display: flex;
   align-items: center;
-  background-image: url("/img/header-background.jpg");
+  background-image: url("/newRegosteel/img/header-background.jpg");
   height: 90vh;
   position: relative;
   justify-content: center;
@@ -177,7 +177,7 @@ body .aboutUs .companyDescription {
 }
 body .products {
   background-color: black;
-  background-image: url("/img/galleryBackground.jpg");
+  background-image: url("/newRegosteel/img/galleryBackground.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: left;
@@ -399,7 +399,7 @@ body footer {
   background-color: #181616;
   text-align: center;
   padding: 7%;
-  background-image: url("/img/footer-background.png");
+  background-image: url("/newRegosteel/img/footer-background.png");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
