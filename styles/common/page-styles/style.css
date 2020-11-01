@@ -1,151 +1,92 @@
 @font-face {
   font-family: "Avenir Roman";
-  src: url("/newRegosteel/fonts/avenir-roman.ttf");
+  src: url("/fonts/avenir-roman.ttf");
 }
+
 @font-face {
   font-family: "Montserrat-Regular";
-  src: url("/newRegosteel/fonts/Montserrat-Regular.ttf");
+  src: url("/fonts/Montserrat-Regular.ttf");
 }
+
 body {
   margin: 0;
   font-family: "Montserrat-Regular", sans-serif;
   font-weight: lighter;
 }
-body nav {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  background-color: transparent;
-  padding-top: 20px;
-  transition: all 0.2s;
-  height: 100px;
-  position: absolute;
-  z-index: 1;
-  width: 100%;
-}
-body nav img {
-  width: auto;
-  height: 30px;
-}
-body nav .hamburger {
-  display: none;
-  width: 40px;
-  height: 22px;
-  border: 0;
-  border-top: 1px solid #ffffff;
-  background: transparent;
-  position: relative;
-  transition: 0.2s;
-  cursor: pointer;
-}
-body nav .hamburger::before, body nav .hamburger::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  border-top: 1px solid #ffffff;
-  transform: translateY(10px);
-}
-body nav .hamburger::after {
-  transform: translateY(20px);
-}
-body nav .animatedMobileMenu {
-  transition: 0.2s;
-  transform: skew(45deg);
-}
-body nav .animatedMobileMenu::before {
-  display: none;
-}
-body nav ul {
-  display: flex;
-  list-style-type: none;
-}
-body nav ul li {
-  padding: 40px;
-  font-size: 1rem;
-  transition: padding 0.2s;
-}
-body nav ul li a {
-  text-decoration: none;
-  color: white;
-}
-body nav ul li a:hover {
-  border-bottom: 2px solid orangered;
-}
-body nav ul .languageSwitcher a {
-  opacity: 0.5;
-}
-body nav ul .languageSwitcher a:hover {
-  opacity: 1;
-}
-body nav .mobile {
-  display: block;
-  background-color: black;
-  width: 170px;
-  height: 100vh;
-  top: -19px;
-  left: 0;
-  position: absolute;
-  transition: all 0.2s;
-  border: 1px solid white;
-}
-body .sticky {
-  position: fixed;
-  background-color: black;
-  width: 100%;
-  padding: 0;
-  z-index: 1;
-  opacity: 0.9;
-  height: 80px;
-}
-body .sticky ul li {
-  padding: 30px;
-  transition: padding 0.2s;
-}
+
 body .boldItalic {
   font-weight: bold;
   font-style: italic;
 }
+
 body header {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
-  background-image: url("/newRegosteel/img/header-background.jpg");
+  background-image: url("/img/header-background.jpg");
   height: 90vh;
   position: relative;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
   background-size: cover;
   background-position: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
 }
+
 body header .titleContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
   text-align: center;
   height: 55vh;
 }
+
 body header .titleContainer div {
+  -ms-flex-item-align: center;
+  -ms-grid-row-align: center;
   align-self: center;
   color: white;
   font-size: 2rem;
 }
-body header .titleContainer div h1, body header .titleContainer div p {
+
+body header .titleContainer div h1,
+body header .titleContainer div p {
   padding: 0;
   margin: 0;
 }
+
 body header .titleContainer div img {
   width: auto;
   height: 100px;
 }
+
 body header .titleContainer div p {
   font-size: 3rem;
 }
+
 body header .titleContainer div p .partnerName {
   font-weight: bolder;
 }
+
 body header .scrollArrowBox {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
   position: absolute;
   bottom: -35px;
@@ -156,17 +97,21 @@ body header .scrollArrowBox {
   -webkit-box-shadow: 0px 11px 20px 0px rgba(0, 0, 0, 0.56);
   box-shadow: 0px 11px 20px 0px rgba(0, 0, 0, 0.56);
 }
+
 body header .scrollArrowBox img {
   width: 20px;
   height: 10px;
 }
+
 body .aboutUs {
   text-align: center;
 }
+
 body .aboutUs h3 {
   padding-top: 7%;
   font-size: 1.6rem;
 }
+
 body .aboutUs .companyDescription {
   width: 60%;
   margin: 0 auto;
@@ -175,14 +120,16 @@ body .aboutUs .companyDescription {
   font-size: 1.2rem;
   text-align: justify;
 }
+
 body .products {
   background-color: black;
-  background-image: url("/newRegosteel/img/galleryBackground.jpg");
+  background-image: url("/img/galleryBackground.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: left;
   padding-bottom: 3%;
 }
+
 body .products h3 {
   color: white;
   margin: 0;
@@ -190,58 +137,78 @@ body .products h3 {
   padding-top: 6%;
   font-size: 1.6rem;
 }
+
 body .products .galleryWrapper {
   display: none;
 }
+
 body .products .galleryWrapper.active {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
   margin: 2%;
 }
+
 body .products .galleryWrapper.active .container {
   margin-right: 5%;
   max-width: 500px;
   /*IE Gallery Fix*/
 }
+
 body .products .galleryWrapper.active .container .main-img img {
   border: 2px solid orangered;
   width: 100%;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   max-height: 332px;
 }
+
 body .products .galleryWrapper.active .container .imgs {
   display: -ms-grid;
+  -ms-grid-columns: (1fr) [4];
   grid-template-columns: repeat(4, 1fr);
   display: grid;
   grid-gap: 5px;
 }
+
 body .products .galleryWrapper.active .container .imgs img {
   width: 100%;
   margin: 2px;
   max-height: 81px;
 }
+
 body .products .galleryWrapper.active .container .imgs img:hover {
   cursor: pointer;
 }
+
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
   body .products .galleryWrapper.active .container .imgs {
     display: -ms-inline-flexbox;
   }
 }
+
 body .products .galleryWrapper.active .productDesc {
   max-width: 500px;
   height: 300px;
   overflow-y: auto;
   overflow-x: hidden;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
 }
+
 body .products .galleryWrapper.active .productDesc div {
   color: white;
 }
+
 body .products .galleryWrapper.active .productDesc div p a {
   color: white;
   width: 50px;
 }
+
 body .products .styled-select {
   background-color: orangered;
   width: 240px;
@@ -250,6 +217,7 @@ body .products .styled-select {
   display: none;
   position: relative;
 }
+
 body .products .styled-select .select-active {
   height: 40px;
   line-height: 40px;
@@ -257,6 +225,7 @@ body .products .styled-select .select-active {
   color: white;
   font-size: 14px;
 }
+
 body .products .styled-select .select-active .triangle {
   position: absolute;
   color: white;
@@ -268,6 +237,7 @@ body .products .styled-select .select-active .triangle {
   height: 16px;
   pointer-events: none;
 }
+
 body .products .styled-select .select {
   list-style: none;
   padding: 0px;
@@ -277,56 +247,81 @@ body .products .styled-select .select {
   width: 240px;
   position: absolute;
 }
+
 body .products .styled-select .select .select-option {
   height: 40px;
   padding-left: 10px;
   line-height: 40px;
   font-size: 14px;
 }
+
 body .products .gallerySwitcher {
   color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
 }
+
 body .products .gallerySwitcher ul {
   list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
 }
+
 body .products .gallerySwitcher ul li {
   margin: 20px;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   border-bottom: 2px solid transparent;
 }
+
 body .products .gallerySwitcher ul li:hover {
   padding-bottom: 2px;
   border-bottom: 2px solid orangered;
   cursor: pointer;
 }
+
 body .products .gallerySwitcher ul .currentlyActive {
   padding-bottom: 2px;
   border-bottom: 2px solid orangered;
 }
+
 body .ourAdvantages {
   background-color: orangered;
   text-align: center;
   color: white;
   padding: 7%;
 }
+
 body .ourAdvantages h3 {
   font-size: 1.6rem;
 }
+
 body .ourAdvantages .advantageBoxContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
 }
+
 body .ourAdvantages .advantageBoxContainer .advantageBox {
   width: 350px;
 }
+
 body .ourAdvantages .advantageBoxContainer .advantageBox:nth-child(2) img {
   width: 110px;
 }
+
 body .ourAdvantages .advantageBoxContainer .advantageBox .advantageExample {
   display: block;
   font-size: 1.4rem;
@@ -334,22 +329,27 @@ body .ourAdvantages .advantageBoxContainer .advantageBox .advantageExample {
   font-weight: bold;
   font-family: Avenir Roman, sans-serif;
 }
+
 body .ourAdvantages .advantageBoxContainer img {
   width: 80px;
   height: 80px;
   margin-bottom: 20px;
 }
+
 body .contactForm {
   text-align: center;
   padding: 7%;
 }
+
 body .contactForm .formIntro {
   padding-bottom: 60px;
   position: relative;
 }
+
 body .contactForm .formIntro p {
   color: #706f6f;
 }
+
 body .contactForm .formIntro::after {
   content: "";
   position: absolute;
@@ -358,33 +358,45 @@ body .contactForm .formIntro::after {
   top: 114px;
   right: 50%;
 }
+
 body .contactForm .formIntro h3 {
   font-size: 1.6rem;
   margin: 0;
 }
+
 body .contactForm form {
   margin-left: -15%;
 }
+
 body .contactForm form .row {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
   padding: 12px;
 }
+
 body .contactForm form .row .leftFormCol {
   width: 12%;
   padding: 15px;
   color: #706f6f;
 }
+
 body .contactForm form .row .rightFormCol {
   width: 30%;
 }
-body .contactForm form .row .rightFormCol input[type=text], body .contactForm form .row .rightFormCol textarea {
+
+body .contactForm form .row .rightFormCol input[type="text"],
+body .contactForm form .row .rightFormCol textarea {
   width: 100%;
   border: 1px solid #ccc;
   padding: 15px;
   resize: vertical;
 }
-body .contactForm form .row input[type=submit] {
+
+body .contactForm form .row input[type="submit"] {
   margin-left: 14%;
   background-color: orangeRed;
   color: white;
@@ -394,21 +406,33 @@ body .contactForm form .row input[type=submit] {
   cursor: pointer;
   float: right;
 }
+
+body .contactForm .privacy-policy-warning-box {
+  width: 100%;
+  text-align: center;
+}
+
+body .contactForm .privacy-policy-warning-box a {
+  color: black;
+}
+
 body footer {
   color: white;
   background-color: #181616;
   text-align: center;
   padding: 7%;
-  background-image: url("/newRegosteel/img/footer-background.png");
+  background-image: url("/img/footer-background.png");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
 }
+
 body footer h3 {
   padding-bottom: 4%;
   position: relative;
   font-size: 1.6rem;
 }
+
 body footer h3::after {
   content: "";
   position: absolute;
@@ -417,31 +441,48 @@ body footer h3::after {
   top: 50px;
   right: 49.5%;
 }
+
 body footer .name {
   font-size: 1.6rem;
   font-weight: bolder;
   font-family: Avenir-Roman, sans-serif;
 }
+
 body footer .contactDetails div {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
 }
+
 body footer .contactDetails div img {
   width: 15px;
   height: 15px;
 }
+
 body footer .contactDetails div .email {
   text-decoration: underline;
   color: white;
 }
-body footer .ownerInfo, body footer .companyDetails, body footer .contactDetails {
+
+body footer .ownerInfo,
+body footer .companyDetails,
+body footer .contactDetails {
   padding-bottom: 1.5%;
 }
-body footer .ownerInfo p, body footer .companyDetails p, body footer .contactDetails p {
+
+body footer .ownerInfo p,
+body footer .companyDetails p,
+body footer .contactDetails p {
   margin: 10px;
   font-family: sans-serif, Arial;
 }
+
 body footer img {
   width: 120px;
   height: 50px;
@@ -470,12 +511,18 @@ body footer img {
     padding-top: 20px;
   }
 }
+
 @media only screen and (max-width: 1000px) {
   body .contactForm form {
     margin: 0;
   }
   body .contactForm form .row {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
   }
   body .contactForm form .row .leftFormCol {
@@ -484,16 +531,17 @@ body footer img {
   body .contactForm form .row .rightFormCol {
     width: auto;
   }
-  body .contactForm form .row .rightFormCol input[type=text] {
+  body .contactForm form .row .rightFormCol input[type="text"] {
     width: 250px;
   }
   body .contactForm form .row .rightFormCol textarea {
     width: 250px;
   }
-  body .contactForm form .row input[type=submit] {
+  body .contactForm form .row input[type="submit"] {
     margin: 0%;
   }
 }
+
 @media only screen and (max-width: 778px) {
   body .navbar .hamburger {
     display: block;
@@ -519,11 +567,21 @@ body footer img {
     color: #3b3a3a;
   }
   body .products {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
   }
   body .products .galleryWrapper.active {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
   }
   body .products .galleryWrapper.active .container {
@@ -544,6 +602,7 @@ body footer img {
     top: 140px;
   }
 }
+
 @media only screen and (max-width: 778px) and (orientation: landscape) {
   body header .titleContainer div h1 img {
     height: 45px;
@@ -552,6 +611,7 @@ body footer img {
     font-size: 1.5rem;
   }
 }
+
 @media only screen and (max-width: 778px) and (min-width: 421) and (orientation: landscape) {
   body header .titleContainer div {
     padding-top: 10%;
@@ -560,6 +620,7 @@ body footer img {
     font-size: 1.5rem;
   }
 }
+
 @media only screen and (max-width: 420px) {
   body header {
     height: 70vh;
@@ -577,5 +638,4 @@ body footer img {
     top: 200px;
   }
 }
-
 /*# sourceMappingURL=style.css.map */

@@ -1,0 +1,135 @@
+nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: transparent;
+  padding-top: 20px;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+}
+
+nav img {
+  width: auto;
+  height: 30px;
+}
+
+nav .hamburger {
+  display: none;
+  width: 40px;
+  height: 22px;
+  border: 0;
+  border-top: 1px solid #ffffff;
+  background: transparent;
+  position: relative;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  cursor: pointer;
+}
+
+nav .hamburger::before, nav .hamburger::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  border-top: 1px solid #ffffff;
+  -webkit-transform: translateY(10px);
+          transform: translateY(10px);
+}
+
+nav .hamburger::after {
+  -webkit-transform: translateY(20px);
+          transform: translateY(20px);
+}
+
+nav .animatedMobileMenu {
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  -webkit-transform: skew(45deg);
+          transform: skew(45deg);
+}
+
+nav .animatedMobileMenu::before {
+  display: none;
+}
+
+nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style-type: none;
+}
+
+nav ul li {
+  padding: 40px;
+  font-size: 1rem;
+  -webkit-transition: padding 0.2s;
+  transition: padding 0.2s;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+}
+
+nav ul li a:hover {
+  border-bottom: 2px solid orangered;
+}
+
+nav ul .languageSwitcher a {
+  opacity: 0.5;
+}
+
+nav ul .languageSwitcher a:hover {
+  opacity: 1;
+}
+
+nav .mobile {
+  display: block;
+  background-color: black;
+  width: 170px;
+  height: 100vh;
+  top: -19px;
+  left: 0;
+  position: absolute;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  border: 1px solid white;
+}
+
+.sticky {
+  position: fixed;
+  background-color: black;
+  width: 100%;
+  padding: 0;
+  z-index: 1;
+  opacity: 0.9;
+  height: 80px;
+}
+
+.sticky ul li {
+  padding: 30px;
+  -webkit-transition: padding 0.2s;
+  transition: padding 0.2s;
+}
+
+@media only screen and (max-width: 778px) {
+  body .navbar .hamburger {
+    display: block;
+  }
+  body .navbar ul {
+    display: none;
+  }
+  body .navbar .mobile {
+    display: block;
+  }
+}
+/*# sourceMappingURL=nav.css.map */
