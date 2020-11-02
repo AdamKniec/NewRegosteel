@@ -24,20 +24,20 @@ body header {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   background-image: url("/img/header-background.jpg");
   height: 90vh;
   position: relative;
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   background-size: cover;
   background-position: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 body header .titleContainer {
@@ -45,16 +45,16 @@ body header .titleContainer {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   text-align: center;
   height: 55vh;
 }
 
 body header .titleContainer div {
   -ms-flex-item-align: center;
-  -ms-grid-row-align: center;
-  align-self: center;
+      -ms-grid-row-align: center;
+      align-self: center;
   color: white;
   font-size: 2rem;
 }
@@ -83,11 +83,11 @@ body header .scrollArrowBox {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   position: absolute;
   bottom: -35px;
   width: 70px;
@@ -147,8 +147,8 @@ body .products .galleryWrapper.active {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin: 2%;
 }
 
@@ -162,14 +162,14 @@ body .products .galleryWrapper.active .container .main-img img {
   border: 2px solid orangered;
   width: 100%;
   -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+          box-sizing: border-box;
   max-height: 332px;
 }
 
 body .products .galleryWrapper.active .container .imgs {
   display: -ms-grid;
-  -ms-grid-columns: (1fr) [4];
-  grid-template-columns: repeat(4, 1fr);
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
   display: grid;
   grid-gap: 5px;
 }
@@ -196,8 +196,8 @@ body .products .galleryWrapper.active .productDesc {
   overflow-y: auto;
   overflow-x: hidden;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 body .products .galleryWrapper.active .productDesc div {
@@ -261,8 +261,8 @@ body .products .gallerySwitcher {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 body .products .gallerySwitcher ul {
@@ -271,13 +271,13 @@ body .products .gallerySwitcher ul {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 body .products .gallerySwitcher ul li {
   margin: 20px;
   -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+          box-sizing: border-box;
   border-bottom: 2px solid transparent;
 }
 
@@ -308,10 +308,10 @@ body .ourAdvantages .advantageBoxContainer {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 body .ourAdvantages .advantageBoxContainer .advantageBox {
@@ -373,8 +373,8 @@ body .contactForm form .row {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   padding: 12px;
 }
 
@@ -453,11 +453,11 @@ body footer .contactDetails div {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 body footer .contactDetails div img {
@@ -519,11 +519,11 @@ body footer img {
   body .contactForm form .row {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
     -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   body .contactForm form .row .leftFormCol {
     width: auto;
@@ -571,18 +571,18 @@ body footer img {
     display: -ms-flexbox;
     display: flex;
     -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
   body .products .galleryWrapper.active {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
   body .products .galleryWrapper.active .container {
     margin: 0;
